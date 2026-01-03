@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#1a1a1a"/>
+  
+  <!-- Plate 1 -->
+  <circle cx="150" cy="150" r="80" fill="#2a2a2a" stroke="#d4af37" stroke-width="3"/>
+  <circle cx="150" cy="150" r="70" fill="#3a3a3a"/>
+  
+  <!-- Steak -->
+  <ellipse cx="150" cy="150" rx="45" ry="35" fill="#8b4513" opacity="0.8"/>
+  <ellipse cx="135" cy="140" rx="20" ry="25" fill="#a0522d" opacity="0.6"/>
+  <ellipse cx="165" cy="145" rx="25" ry="20" fill="#a0522d" opacity="0.6"/>
+  
+  <!-- Vegetable garnish -->
+  <ellipse cx="150" cy="190" rx="8" ry="12" fill="#4a8f4a"/>
+  <ellipse cx="160" cy="185" rx="8" ry="12" fill="#4a8f4a"/>
+  <ellipse cx="140" cy="185" rx="8" ry="12" fill="#4a8f4a"/>
+  
+  <!-- Plate 2 -->
+  <circle cx="280" cy="150" r="80" fill="#2a2a2a" stroke="#d4af37" stroke-width="3"/>
+  <circle cx="280" cy="150" r="70" fill="#3a3a3a"/>
+  
+  <!-- Pasta -->
+  <circle cx="280" cy="150" rx="50" ry="40" fill="#ffd700" opacity="0.7"/>
+  <ellipse cx="270" cy="140" rx="15" ry="20" fill="#ff8c00" opacity="0.7"/>
+  <ellipse cx="290" cy="145" rx="12" ry="18" fill="#ff6347" opacity="0.7"/>
+  <ellipse cx="280" cy="165" rx="18" ry="15" fill="#ffa500" opacity="0.7"/>
+  
+  <!-- Herbs on pasta -->
+  <circle cx="270" cy="130" r="3" fill="#4a8f4a"/>
+  <circle cx="285" cy="135" r="3" fill="#4a8f4a"/>
+  <circle cx="295" cy="150" r="3" fill="#4a8f4a"/>
+  
+  <!-- Title -->
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="24" fill="#d4af37" text-anchor="middle" font-weight="bold">Our Signature Dishes</text>
+</svg>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-Minus Compiler Web</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">C-</span>
+                <h1>Compiler</h1>
+            </div>
+            <div class="controls">
+                <button id="run-btn" class="btn primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 3L19 12L5 21V3Z" fill="currentColor" />
+                    </svg>
+                    Run Code
+                </button>
+            </div>
+        </header>
+
+        <main class="editor-layout">
+            <section class="editor-pane glass-panel">
+                <div class="pane-header">
+                    <span>Source Code (main.cm)</span>
+                </div>
+                <div class="editor-wrapper">
+                    <textarea id="code-editor" spellcheck="false"></textarea>
+                </div>
+            </section>
+
+            <section class="output-pane glass-panel">
+                <div class="pane-header">
+                    <span>Output Console</span>
+                    <button id="clear-btn" class="btn sm">Clear</button>
+                </div>
+                <div id="console-output" class="console-output">
+                    <div class="log-entry system">Ready to compile...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Website</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./restaurant.css">
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script src="./restaurant.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">Gourmet Haven</a>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#reservation" class="nav-link btn-reserve">Reservation</a></li>
+        <li>
+          <a href="#" id="cart-btn" class="nav-link">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count"
+              style="background: var(--primary); color: #000; padding: 2px 6px; border-radius: 50%; font-size: 0.8rem; vertical-align: top; display: none;">0</span>
+          </a>
+        </li>
+      </ul>
+      <!-- Mobile Menu Toggle (Simplified) -->
+      <div class="mobile-toggle" style="display: none; color: white; cursor: pointer;">
+        <i class="fas fa-bars fa-2x"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Experience the Taste of Luxury</h1>
+      <p class="hero-subtitle">Exquisite cuisine prepared by world-class chefs</p>
+      <a href="#menu" class="btn-primary">View Full Menu</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title">Our Story</h2>
+      <p class="section-subtitle">A Tradition of Excellence</p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <h3>Meet Our Master Chef</h3>
+          <p>Chef Antoine Laurent brings over 20 years of culinary expertise to Gourmet Haven. With a passion for
+            blending traditional French techniques with modern innovation, every dish is a masterpiece.</p>
+          <p>We source only the freshest, locally-grown ingredients to ensure the highest quality dining experience for
+            our guests.</p>
+
+          <div class="about-features">
+            <div class="feature">
+              <i class="fas fa-certificate feature-icon" style="color: var(--primary)"></i>
+              <h4>Michelin Star</h4>
+              <p>Recognized for excellence in 2023</p>
+            </div>
+            <div class="feature">
+              <i class="fas fa-leaf feature-icon" style="color: var(--primary)"></i>
+              <h4>Organic</h4>
+              <p>100% Farm to Table ingredients</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <div class="image-placeholder">
+            <!-- JS will inject image here ideally, or fallback to placeholder style -->
+            <i class="fas fa-user-chef placeholder-icon"
+              style="color: white; font-size: 5rem; margin-bottom: 20px;"></i>
+            <p>Chef Antoine Laurent</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="section menu-section">
+    <div class="container">
+      <h2 class="section-title">Our Menu</h2>
+      <p class="section-subtitle">Curated Dishes for Every Palate</p>
+
+      <div class="menu-grid">
+        <!-- Starters -->
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <h3>Starters</h3>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="item-header">
+                <h4>Truffle Mushroom Soup</h4>
+                <span class="price">$12</span>
+              </div>
+              <p>Creamy wild mushroom soup with truffle oil.</p>
+              <button class="add-to-cart-btn" data-name="Truffle Mushroom Soup" data-price="12"
+                style="background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 5px 10px; border-radius: 15px; cursor: pointer; margin-top: 10px; font-size: 0.8rem;">Add
+                to Cart</button>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h4>Bruschetta Trio</h4>
+                <span class="price">$10</span>
+              </div>
+              <p>Classic tomato, olive tapenade, and roasted pepper.</p>
+              <button class="add-to-cart-btn" data-name="Bruschetta Trio" data-price="10"
+                style="background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 5px 10px; border-radius: 15px; cursor: pointer; margin-top: 10px; font-size: 0.8rem;">Add
+                to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mains -->
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <h3>Main Courses</h3>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="item-header">
+                <h4>Wagyu Beef Steak</h4>
+                <span class="price">$45</span>
+              </div>
+              <p>Grilled to perfection, served with garlic mash.</p>
+              <button class="add-to-cart-btn" data-name="Wagyu Beef Steak" data-price="45"
+                style="background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 5px 10px; border-radius: 15px; cursor: pointer; margin-top: 10px; font-size: 0.8rem;">Add
+                to Cart</button>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h4>Pan-Seared Salmon</h4>
+                <span class="price">$32</span>
+              </div>
+              <p>Served with asparagus and lemon butter sauce.</p>
+              <button class="add-to-cart-btn" data-name="Pan-Seared Salmon" data-price="32"
+                style="background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 5px 10px; border-radius: 15px; cursor: pointer; margin-top: 10px; font-size: 0.8rem;">Add
+                to Cart</button>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h4>Truffle Pasta</h4>
+                <span class="price">$28</span>
+              </div>
+              <p>Fresh pasta with creamy black truffle sauce.</p>
+              <button class="add-to-cart-btn" data-name="Truffle Pasta" data-price="28"
+                style="background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 5px 10px; border-radius: 15px; cursor: pointer; margin-top: 10px; font-size: 0.8rem;">Add
+                to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <h3>Desserts</h3>
+          </div>
+          <div class="menu-items">
+            <div class="menu-item">
+              <div class="item-header">
+                <h4>Chocolate Lava Cake</h4>
+                <span class="price">$14</span>
+              </div>
+              <p>Warm molten center, served with vanilla bean ice cream.</p>
+              <button class="add-to-cart-btn" data-name="Chocolate Lava Cake" data-price="14"
+                style="background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 5px 10px; border-radius: 15px; cursor: pointer; margin-top: 10px; font-size: 0.8rem;">Add
+                to Cart</button>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <h4>Tiramisu</h4>
+                <span class="price">$12</span>
+              </div>
+              <p>Classic Italian dessert with coffee and mascarpone.</p>
+              <button class="add-to-cart-btn" data-name="Tiramisu" data-price="12"
+                style="background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 5px 10px; border-radius: 15px; cursor: pointer; margin-top: 10px; font-size: 0.8rem;">Add
+                to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">We'd Love to Hear From You</p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+          <h3>Location</h3>
+          <p>123 Culinary Avenue</p>
+          <p>New York, NY 10012</p>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-phone" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+          <h3>Phone</h3>
+          <p>+1 (555) 123-4567</p>
+          <p>Mon-Sun: 11am - 11pm</p>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-envelope" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+          <h3>Email</h3>
+          <p>reservations@gourmethaven.com</p>
+          <p>info@gourmethaven.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Gourmet Haven. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Reservation Modal -->
+  <div id="reservationModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal close-reservation">&times;</span>
+      <h2>Make a Reservation</h2>
+      <form id="reservationForm" class="reservation-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="guests">Guests</label>
+            <select id="guests" required>
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4 People</option>
+              <option value="5+">5+ People</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+          </div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" id="time" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="notes">Special Requests</label>
+          <textarea id="notes" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Confirm Reservation</button>
+      </form>
+      <div id="confirmationMessage" class="confirmation-message"></div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal close-cart">&times;</span>
+      <h2>Your Order</h2>
+      <div id="cartItems" style="margin-bottom: 2rem;">
+        <!-- Cart items will be injected here -->
+        <p style="text-align: center; color: var(--text-muted);">Your cart is empty.</p>
+      </div>
+      <div class="cart-total"
+        style="display: flex; justify-content: space-between; border-top: 1px solid var(--border-dark); padding-top: 1rem; margin-top: 1rem;">
+        <h3>Total:</h3>
+        <h3 id="cartTotal" style="color: var(--primary);">$0.00</h3>
+      </div>
+      <button class="btn-submit" style="width: 100%; margin-top: 1rem;">Checkout</button>
+    </div>
+  </div>
+
+</body>
+
+</html>

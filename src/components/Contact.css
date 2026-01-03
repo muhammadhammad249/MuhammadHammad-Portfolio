@@ -1,0 +1,464 @@
+.contact-section {
+    position: relative;
+    padding: 100px 2rem;
+    min-height: 100vh;
+    background: var(--section-bg);
+    overflow: hidden;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+}
+
+.cyber-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.deep-space-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, var(--section-bg) 0%, var(--bg-color) 100%);
+    opacity: 0.9;
+}
+
+/* Digital Web Pattern */
+.digital-web {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(14, 165, 233, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(circle at 50% 50%, black, transparent 80%);
+}
+
+.digital-web::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 2px 2px, rgba(14, 165, 233, 0.2) 1px, transparent 0);
+    background-size: 50px 50px;
+}
+
+/* Glowing blue particles scattered like stars */
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #0ea5e9;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0ea5e9;
+    opacity: 0.6;
+}
+
+/* Specific particle positioning */
+.p0 {
+    top: 10%;
+    left: 15%;
+}
+
+.p1 {
+    top: 25%;
+    left: 85%;
+}
+
+.p2 {
+    top: 70%;
+    left: 5%;
+}
+
+.p3 {
+    top: 85%;
+    left: 45%;
+}
+
+.p4 {
+    top: 40%;
+    left: 30%;
+}
+
+.p5 {
+    top: 60%;
+    left: 75%;
+}
+
+.p6 {
+    top: 15%;
+    left: 60%;
+}
+
+/* ... (approx 50 particles in JSX will just render as dots at random or CSS positions) */
+
+/* Floating Code Dust */
+.code-dust {
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.code-line {
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    color: #0ea5e9;
+    white-space: nowrap;
+    animation: drift 20s infinite linear;
+}
+
+@keyframes drift {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, -10px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.contact-wrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--text-main);
+    text-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* Left side minimal items */
+.contact-info-minimal {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.minimal-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.m-icon {
+    font-size: 2.5rem;
+    color: #0ea5e9;
+    filter: drop-shadow(0 0 8px #0ea5e9);
+}
+
+.m-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.m-text span {
+    font-size: 0.9rem;
+    color: rgba(14, 165, 233, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.2rem;
+}
+
+.m-text a {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.m-text a:hover {
+    color: #0ea5e9;
+    transform: translateX(5px);
+}
+
+/* Right side glass form */
+.glassmorphism-form {
+    background: var(--surface);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: 40px;
+    padding: 4rem;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Neon glow border effect */
+.form-inner-glow {
+    position: absolute;
+    inset: -1px;
+    border-radius: 40px;
+    background: transparent;
+    border: 1px solid rgba(14, 165, 233, 0.5);
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.2);
+    pointer-events: none;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.input-field label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #0ea5e9;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+    display: block;
+    font-weight: 600;
+}
+
+.input-field input,
+.input-field textarea {
+    background: var(--bg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    color: var(--text-main);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: border-color, box-shadow, background-color;
+    font-family: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-field input:hover,
+.input-field textarea:hover {
+    border-color: rgba(14, 165, 233, 0.4);
+    background: rgba(14, 165, 233, 0.02);
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+    border-color: #0ea5e9;
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.3), inset 0 0 4px rgba(14, 165, 233, 0.1);
+    background: rgba(14, 165, 233, 0.05);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.input-field input:active,
+.input-field textarea:active {
+    border-color: #0ea5e9;
+}
+
+.input-field textarea {
+    min-height: 150px;
+    resize: none;
+}
+
+.glass-submit-btn {
+    width: 100%;
+    padding: 1.2rem;
+    background: #0ea5e9;
+    color: #fff;
+    border: none;
+    border-radius: 99px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.4);
+    will-change: transform, box-shadow;
+}
+
+.glass-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px rgba(14, 165, 233, 0.6);
+}
+
+.glass-submit-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0 25px rgba(14, 165, 233, 0.5);
+    transition-duration: 0.1s;
+}
+
+@media (max-width: 960px) {
+    .contact-section {
+        padding: 60px 1.5rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact-title {
+        font-size: 2.8rem;
+    }
+
+    .contact-info-minimal {
+        gap: 2rem;
+    }
+
+    .minimal-item {
+        gap: 1.5rem;
+    }
+
+    .glassmorphism-form {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 50px 1.25rem;
+        min-height: auto;
+    }
+
+    .contact-header {
+        margin-bottom: 3rem;
+    }
+
+    .contact-title {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+
+    .contact-grid {
+        gap: 2.5rem;
+    }
+
+    .contact-info-minimal {
+        gap: 1.5rem;
+    }
+
+    .minimal-item {
+        gap: 1.25rem;
+    }
+
+    .m-icon {
+        font-size: 2rem;
+    }
+
+    .m-text span {
+        font-size: 0.8rem;
+    }
+
+    .m-text a {
+        font-size: 1rem;
+    }
+
+    .glassmorphism-form {
+        padding: 1.5rem;
+        border-radius: 30px;
+    }
+
+    .input-field {
+        margin-bottom: 1.5rem;
+    }
+
+    .input-field input,
+    .input-field textarea {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+
+    .input-field textarea {
+        min-height: 120px;
+    }
+
+    .glass-submit-btn {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 40px 1rem;
+    }
+
+    .contact-title {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+
+    .contact-grid {
+        gap: 2rem;
+    }
+
+    .contact-info-minimal {
+        gap: 1.25rem;
+    }
+
+    .minimal-item {
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .m-icon {
+        font-size: 1.8rem;
+    }
+
+    .m-text {
+        align-items: center;
+    }
+
+    .m-text a {
+        font-size: 0.95rem;
+    }
+
+    .glassmorphism-form {
+        padding: 1.25rem;
+        border-radius: 20px;
+    }
+
+    .input-field label {
+        font-size: 0.75rem;
+    }
+
+    .input-field input,
+    .input-field textarea {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .input-field textarea {
+        min-height: 100px;
+    }
+
+    .glass-submit-btn {
+        padding: 0.85rem;
+        font-size: 0.9rem;
+    }
+
+    .glassmorphism-form {
+        padding: 2rem;
+    }
+}

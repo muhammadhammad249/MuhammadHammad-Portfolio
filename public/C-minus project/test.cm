@@ -1,0 +1,30 @@
+/* C-Minus Test File */
+int x;
+int arr[5];
+
+int gcd(int u, int v) {
+    if (v == 0) return u;
+    else return gcd(v, u - u/v*v);
+}
+
+void main(void) {
+    int i; 
+    x = 10;
+    i = 0;
+    
+    /* Test Array and Loop */
+    while (i < 5) {
+        arr[i] = x + i;
+        i = i + 1;
+    }
+    
+    /* Test Function Call and Output */
+    output(gcd(18, 12)); /* Should print 6 */
+    
+    /* Test Array Access */
+    i = 0;
+    while (i < 5) {
+        output(arr[i]); /* Should print 10, 11, 12, 13, 14 */
+        i = i + 1;
+    }
+}

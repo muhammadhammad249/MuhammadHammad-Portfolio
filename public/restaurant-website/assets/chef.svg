@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400">
+  <!-- Background -->
+  <rect width="300" height="400" fill="#1a1a1a"/>
+  
+  <!-- Head -->
+  <circle cx="150" cy="80" r="35" fill="#c9a876"/>
+  
+  <!-- Chef Hat -->
+  <rect x="120" y="40" width="60" height="25" fill="#ffffff" stroke="#d4af37" stroke-width="2" rx="3"/>
+  <rect x="115" y="35" width="70" height="8" fill="#ffffff" stroke="#d4af37" stroke-width="2"/>
+  <rect x="118" y="30" width="64" height="6" fill="#ffffff" stroke="#d4af37" stroke-width="1.5"/>
+  
+  <!-- Face -->
+  <circle cx="140" cy="75" r="3" fill="#000"/>
+  <circle cx="160" cy="75" r="3" fill="#000"/>
+  <path d="M 145 90 Q 150 95 155 90" stroke="#000" stroke-width="2" fill="none"/>
+  
+  <!-- Neck -->
+  <rect x="140" y="110" width="20" height="15" fill="#c9a876"/>
+  
+  <!-- Chef Jacket -->
+  <rect x="90" y="125" width="120" height="100" fill="#ffffff" stroke="#d4af37" stroke-width="2" rx="5"/>
+  
+  <!-- Buttons -->
+  <circle cx="140" cy="145" r="3" fill="#d4af37"/>
+  <circle cx="150" cy="155" r="3" fill="#d4af37"/>
+  <circle cx="140" cy="165" r="3" fill="#d4af37"/>
+  <circle cx="150" cy="175" r="3" fill="#d4af37"/>
+  <circle cx="140" cy="185" r="3" fill="#d4af37"/>
+  <circle cx="150" cy="195" r="3" fill="#d4af37"/>
+  
+  <!-- Apron -->
+  <rect x="85" y="220" width="130" height="120" fill="#d4af37" stroke="#d4af37" stroke-width="2" rx="3"/>
+  
+  <!-- Apron Pocket -->
+  <rect x="115" y="250" width="70" height="60" fill="#c9a064" stroke="#d4af37" stroke-width="1.5" rx="2"/>
+  
+  <!-- Arms -->
+  <rect x="50" y="150" width="40" height="15" fill="#c9a876" rx="7"/>
+  <rect x="210" y="150" width="40" height="15" fill="#c9a876" rx="7"/>
+  
+  <!-- Hands -->
+  <circle cx="45" cy="157" r="8" fill="#c9a876"/>
+  <circle cx="255" cy="157" r="8" fill="#c9a876"/>
+  
+  <!-- Title -->
+  <text x="150" y="380" font-family="Arial, sans-serif" font-size="20" fill="#d4af37" text-anchor="middle" font-weight="bold">Our Master Chef</text>
+</svg>

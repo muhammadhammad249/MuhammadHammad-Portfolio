@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Economica&family=Grape+Nuts&family=Roboto:wght@100;300;400;700;900&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgb(16, 16, 16);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(100, 100, 100);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgb(150, 150, 150);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+h2 {
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+
+$bg: rgb(16, 16, 16);
+
+.header {
+  height: 100px;
+  background-color: $bg;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: background-color;
+
+  > img {
+    height: 200%;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  > div {
+    width: 100%;
+    margin-left: 4vmax;
+    > a {
+      margin: 2vmax;
+      font-size: 1.3rem;
+      font-weight: 300;
+      transition: all 0.3s ease;
+      position: relative;
+
+      &:hover {
+        color: rgb(216, 216, 216);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: rgb(229, 9, 20);
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+  > svg {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: rgb(216, 216, 216);
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 80px;
+    padding: 1.5rem;
+
+    > img {
+      height: 150%;
+    }
+
+    > div {
+      margin-left: 2vmax;
+
+      > a {
+        margin: 1.5vmax;
+        font-size: 1rem;
+      }
+    }
+
+    > svg {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    height: 70px;
+    padding: 1rem;
+
+    > div {
+      margin-left: 1vmax;
+      display: none;
+
+      > a {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Hammad - Resume</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-gray: #f3f4f6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--bg-gray);
+            padding-bottom: 30px;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .contact-info a {
+            color: var(--text-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .summary {
+            font-size: 1rem;
+            color: var(--text-dark);
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: var(--bg-gray);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .project-tech {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-weight: 700;
+        }
+
+        .school {
+            color: var(--text-light);
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .print-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="name">Muhammad Hammad</h1>
+        <div class="title">Frontend Developer (React.js)</div>
+        <div class="contact-info">
+            <a href="mailto:muhammadhammadjatoi65@gmail.com">muhammadhammadjatoi65@gmail.com</a>
+            <span>|</span>
+            <a href="https://github.com/muhammadhammad249">github.com/muhammadhammad249</a>
+            <span>|</span>
+            <a href="https://linkedin.com/in/muhammad-hammad-40a156290">linkedin.com/in/muhammad-hammad</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="summary">
+            Highly motivated Frontend Developer with a strong foundation in React.js and modern web technologies.
+            Passionate about building responsive, user-friendly applications and solving complex problems through clean,
+            efficient code. Eager to contribute to innovative projects and continue learning in a dynamic environment.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-tag">React.js</div>
+            <div class="skill-tag">JavaScript (ES6+)</div>
+            <div class="skill-tag">HTML5</div>
+            <div class="skill-tag">CSS3</div>
+            <div class="skill-tag">Tailwind CSS</div>
+            <div class="skill-tag">Git & GitHub</div>
+            <div class="skill-tag">Responsive Design</div>
+            <div class="skill-tag">API Integration</div>
+            <div class="skill-tag">Framer Motion</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">Travel Agency Website</span>
+                <span class="project-tech">React.js, CSS, JavaScript</span>
+            </div>
+            <p class="project-desc">Developed a responsive travel booking platform featuring immersive UI, tour
+                packages, and seamless navigation. Implemented modern design principles to enhance user engagement.</p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">Netflix Clone</span>
+                <span class="project-tech">React.js, API Integration, CSS</span>
+            </div>
+            <p class="project-desc">Built a functional clone of the Netflix interface using React.js. Demonstrated
+                mastery of component-based architecture and API integration for fetching and displaying dynamic movie
+                data.</p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">C-Minus Compiler</span>
+                <span class="project-tech">C++, JavaScript, Web</span>
+            </div>
+            <p class="project-desc">Developed a web-based interface for a C-Minus compiler, showcasing understanding of
+                language processing and complex logic implementation within a user-friendly web environment.</p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">Currency Converter</span>
+                <span class="project-tech">HTML, CSS, JavaScript</span>
+            </div>
+            <p class="project-desc">Designed a real-time currency conversion tool with a clean UI, utilizing external
+                APIs to provide accurate and up-to-date exchange rates for users.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-item">
+            <div>
+                <div class="degree">Bachelor of Science in Computer Science</div>
+                <div class="school">University Name (Please Update)</div>
+            </div>
+            <div class="date">2021 - Present</div>
+        </div>
+    </div>
+
+    <a href="javascript:window.print()" class="print-btn no-print">Save as PDF</a>
+</body>
+
+</html>

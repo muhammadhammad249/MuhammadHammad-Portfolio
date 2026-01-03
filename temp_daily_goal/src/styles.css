@@ -1,0 +1,74 @@
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --muted:#7b8a99;
+  --accent:#5b8def;
+  --danger:#ff6b6b;
+  --glass: rgba(255,255,255,0.6);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,var(--bg),#eef3fb);
+  color:#12202b;
+  -webkit-font-smoothing:antialiased;
+}
+
+.app{max-width:980px;margin:36px auto;padding:20px}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.header h1{margin:0;font-size:26px}
+.header .date{color:var(--muted);margin-top:6px}
+
+.progress-top{width:260px}
+
+.main{display:block}
+.goal-input{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(17,24,39,0.06);margin-bottom:18px}
+.goal-input .row{display:flex;gap:12px}
+.goal-input input.title{flex:1;padding:12px 14px;border-radius:10px;border:1px solid #e6eefc;background:transparent}
+.goal-input .add-btn{padding:10px 14px;border-radius:10px;border:none;background:var(--accent);color:white;font-weight:600;cursor:pointer}
+.goal-input textarea.desc{width:100%;margin-top:10px;padding:10px;border-radius:8px;border:1px solid #e9f0ff;min-height:56px}
+
+.empty{padding:36px;background:var(--card);border-radius:12px;text-align:center;color:var(--muted);box-shadow:0 6px 18px rgba(17,24,39,0.04)}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
+.card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 8px 24px rgba(16,24,40,0.06);transition:transform 160ms ease,opacity 160ms ease}
+.card:hover{transform:translateY(-6px)}
+.card.completed{opacity:0.58}
+.card .card-top{display:flex;align-items:center}
+.checkbox{display:flex;align-items:center}
+.checkbox input{display:none}
+.checkmark{width:18px;height:18px;border-radius:6px;border:2px solid #dbe9ff;display:inline-block;margin-right:10px;position:relative}
+.checkbox input:checked + .checkmark{background:var(--accent);border-color:var(--accent)}
+.checkmark::after{content:'';position:absolute;left:4px;top:1px;width:5px;height:9px;border:2px solid white;border-top:0;border-left:0;transform:rotate(40deg);opacity:0}
+.checkbox input:checked + .checkmark::after{opacity:1}
+.card-title{margin:10px 0 0 0;font-size:18px}
+.card-desc{margin:6px 0 0 0;color:var(--muted);font-size:14px}
+.card .card-actions{display:flex;gap:8px}
+.spacer{flex:1}
+.btn{padding:8px 10px;border-radius:8px;border:none;background:#eef6ff;color:var(--accent);cursor:pointer}
+.btn.small{padding:6px 8px;font-size:13px}
+.btn.ghost{background:transparent;color:var(--muted);border:1px solid #f0f4ff}
+.btn.danger{background:var(--danger);color:white}
+
+.edit-title{width:100%;padding:10px;border-radius:8px;border:1px solid #e9f0ff}
+.edit-desc{width:100%;margin-top:8px;padding:8px;border-radius:8px;border:1px solid #eef4ff;min-height:66px}
+
+.footer{margin-top:20px;text-align:center;color:var(--muted)}
+
+.progress{background:transparent}
+.progress-info{display:flex;justify-content:space-between;color:var(--muted);font-size:13px;margin-bottom:8px}
+.progress-track{height:10px;background:#e6f0ff;border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),#6aa8ff);transition:width 400ms ease}
+
+@media (max-width:720px){
+  .grid{grid-template-columns:1fr}
+  .header{flex-direction:column;align-items:flex-start;gap:12px}
+  .progress-top{width:100%}
+}
+
+/* completed strike-through */
+.card.completed .card-title{text-decoration:line-through}
+
