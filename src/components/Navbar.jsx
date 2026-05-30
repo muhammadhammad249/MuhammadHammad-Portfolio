@@ -1,67 +1,52 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, memo } from 'react';
 import { FaBars, FaTimes, FaMoon, FaSun, FaGithub } from 'react-icons/fa';
 import './Navbar.css';
 
-const Navbar = () => {
+const applyTheme = (themeType) => {
+  document.body.classList.remove('theme-light', 'theme-dark');
+  document.body.classList.add(themeType === 'light' ? 'theme-light' : 'theme-dark');
+};
+
+const Navbar = memo(() => {
   const [click, setClick] = useState(false);
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(() => {
+    // Read from localStorage at init to avoid flicker
+    return localStorage.getItem('theme') || 'dark';
+  });
   const [scrolled, setScrolled] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  // Initialize theme on mount
+  // Apply theme immediately on mount without waiting for effect
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
-    applyTheme(savedTheme);
-    setMounted(true);
-  }, []);
+    applyTheme(theme);
+  }, []); // eslint-disable-line
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const applyTheme = (themeType) => {
-    // Remove both classes first
-    document.body.classList.remove('theme-light', 'theme-dark');
-    // Add the appropriate class
-    if (themeType === 'light') {
-      document.body.classList.add('theme-light');
-    } else {
-      document.body.classList.add('theme-dark');
-    }
-  };
+  const handleClick = useCallback(() => setClick(c => !c), []);
+  const closeMobileMenu = useCallback(() => setClick(false), []);
 
-  const setLightTheme = () => {
+  const setLightTheme = useCallback(() => {
     setTheme('light');
     applyTheme('light');
     localStorage.setItem('theme', 'light');
-  };
+  }, []);
 
-  const setDarkTheme = () => {
+  const setDarkTheme = useCallback(() => {
     setTheme('dark');
     applyTheme('dark');
     localStorage.setItem('theme', 'dark');
-  };
+  }, []);
 
-  if (!mounted) {
-    return null; // Prevent hydration mismatch
-  }
+  const scrollToTop = useCallback(() => window.scrollTo({ top: 0, behavior: 'smooth' }), []);
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <div className="logo" onClick={() => window.scrollTo(0, 0)}>
+        <div className="logo" onClick={scrollToTop}>
           <span className="bracket">&lt;</span>
           Hammad
           <span className="bracket">/&gt;</span>
@@ -71,7 +56,6 @@ const Navbar = () => {
           <li><a href="#home" className="nav-link" onClick={closeMobileMenu}>Home</a></li>
           <li><a href="#about" className="nav-link" onClick={closeMobileMenu}>About</a></li>
           <li><a href="#projects" className="nav-link" onClick={closeMobileMenu}>Projects</a></li>
-
           <li><a href="#resume" className="nav-link nav-resume" onClick={closeMobileMenu}>Resume</a></li>
           <li><a href="#contact" className="nav-link" onClick={closeMobileMenu}>Contact</a></li>
         </ul>
@@ -84,24 +68,10 @@ const Navbar = () => {
           </div>
 
           <div className="theme-toggle" role="group" aria-label="Theme toggle">
-            <button
-              type="button"
-              className={`theme-btn ${theme === 'light' ? 'active' : ''}`}
-              onClick={setLightTheme}
-              title="Light Mode"
-              aria-pressed={theme === 'light'}
-              aria-label="Switch to light mode"
-            >
+            <button type="button" className={`theme-btn ${theme === 'light' ? 'active' : ''}`} onClick={setLightTheme} title="Light Mode" aria-pressed={theme === 'light'} aria-label="Switch to light mode">
               <FaSun />
             </button>
-            <button
-              type="button"
-              className={`theme-btn ${theme === 'dark' ? 'active' : ''}`}
-              onClick={setDarkTheme}
-              title="Dark Mode"
-              aria-pressed={theme === 'dark'}
-              aria-label="Switch to dark mode"
-            >
+            <button type="button" className={`theme-btn ${theme === 'dark' ? 'active' : ''}`} onClick={setDarkTheme} title="Dark Mode" aria-pressed={theme === 'dark'} aria-label="Switch to dark mode">
               <FaMoon />
             </button>
           </div>
@@ -115,6 +85,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+});
 
 export default Navbar;

@@ -1,25 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, memo, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import './Contact.css';
 
-const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
+// Static data outside component – never re-generated on state change
+const SPACE_PARTICLES = Array.from({ length: 60 }, (_, i) => ({
+    id: i,
+    top: (i * 1.67) % 100,
+    left: (i * 7.3) % 100,
+    opacity: 0.2 + (i % 7) * 0.08,
+}));
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
+const CODE_LINES = [
+    'git push origin main',
+    'npm run build',
+    'const x = new App();',
+    'docker-compose.yml',
+    'api.v1.connect()',
+    'system.init(status: 200)',
+    "import { motion } from 'framer-motion';",
+];
 
-    const handleSubmit = (e) => {
+const CODE_LINE_STYLES = CODE_LINES.map((_, i) => ({
+    top: `${10 + (i * 13) % 80}%`,
+    left: `${5 + (i * 17) % 90}%`,
+    animationDelay: `${(i * 1.4) % 10}s`,
+}));
+
+const Contact = memo(() => {
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
+    const handleChange = useCallback((e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    }, []);
+
+    const handleSubmit = useCallback((e) => {
         e.preventDefault();
-        console.log(formData);
         alert('Message sent! (Holographic transmission complete)');
         setFormData({ name: '', email: '', message: '' });
-    };
+    }, []);
 
     return (
         <section id="contact" className="contact-section">
@@ -27,41 +47,19 @@ const Contact = () => {
                 <div className="deep-space-bg"></div>
                 <div className="digital-web"></div>
 
-                {/* Space Particles */}
                 <div className="space-particles">
-                    {[...Array(60)].map((_, i) => (
+                    {SPACE_PARTICLES.map((p) => (
                         <div
-                            key={i}
+                            key={p.id}
                             className="particle"
-                            style={{
-                                top: `${Math.random() * 100}%`,
-                                left: `${Math.random() * 100}%`,
-                                opacity: 0.2 + Math.random() * 0.6
-                            }}
+                            style={{ top: `${p.top}%`, left: `${p.left}%`, opacity: p.opacity }}
                         />
                     ))}
                 </div>
 
-                {/* Floating Code Text */}
                 <div className="code-dust">
-                    {[
-                        "git push origin main",
-                        "npm run build",
-                        "const x = new App();",
-                        "docker-compose.yml",
-                        "api.v1.connect()",
-                        "system.init(status: 200)",
-                        "import { motion } from 'framer-motion';"
-                    ].map((text, i) => (
-                        <span
-                            key={i}
-                            className="code-line"
-                            style={{
-                                top: `${10 + Math.random() * 80}%`,
-                                left: `${5 + Math.random() * 90}%`,
-                                animationDelay: `${Math.random() * 10}s`
-                            }}
-                        >
+                    {CODE_LINES.map((text, i) => (
+                        <span key={i} className="code-line" style={CODE_LINE_STYLES[i]}>
                             {text}
                         </span>
                     ))}
@@ -74,18 +72,18 @@ const Contact = () => {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
                 >
                     <h2 className="contact-title">Get In Touch</h2>
                 </motion.div>
 
                 <div className="contact-grid">
-                    {/* Left: Contact Info Info Panel */}
                     <motion.div
                         className="contact-info-minimal"
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.6 }}
                     >
                         <div className="minimal-item">
                             <FaEnvelope className="m-icon" />
@@ -94,7 +92,6 @@ const Contact = () => {
                                 <a href="mailto:muhammadhammadjato65@gmail.com">muhammadhammadjato65@gmail.com</a>
                             </div>
                         </div>
-
                         <div className="minimal-item">
                             <FaGithub className="m-icon" />
                             <div className="m-text">
@@ -102,7 +99,6 @@ const Contact = () => {
                                 <a href="https://github.com/muhammadhammad249" target="_blank" rel="noopener noreferrer">github.com/muhammadhammad249</a>
                             </div>
                         </div>
-
                         <div className="minimal-item">
                             <FaLinkedin className="m-icon" />
                             <div className="m-text">
@@ -112,61 +108,34 @@ const Contact = () => {
                         </div>
                     </motion.div>
 
-                    {/* Right: Contact Form */}
                     <motion.div
                         className="contact-form-glass"
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.6 }}
                     >
                         <form className="glassmorphism-form" onSubmit={handleSubmit}>
                             <div className="form-inner-glow"></div>
-
                             <div className="input-field">
                                 <label>Name</label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    required
-                                    placeholder="Your Name"
-                                />
+                                <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Your Name" />
                             </div>
-
                             <div className="input-field">
                                 <label>Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    required
-                                    placeholder="Your Email"
-                                />
+                                <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Your Email" />
                             </div>
-
                             <div className="input-field">
                                 <label>Message</label>
-                                <textarea
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    required
-                                    placeholder="Your Message"
-                                ></textarea>
+                                <textarea name="message" value={formData.message} onChange={handleChange} required placeholder="Your Message"></textarea>
                             </div>
-
-                            <button type="submit" className="glass-submit-btn">
-                                Send Message
-                            </button>
+                            <button type="submit" className="glass-submit-btn">Send Message</button>
                         </form>
                     </motion.div>
                 </div>
             </div>
         </section>
     );
-};
+});
 
 export default Contact;

@@ -1,30 +1,47 @@
-import React from 'react';
+import React, { memo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { FaFilePdf, FaDownload } from 'react-icons/fa';
 import './Resume.css';
-import resumePdf from '../assets/Hammad.pdf';
 
-const Resume = () => {
+// Static particle data outside component
+const DUST_PARTICLES = Array.from({ length: 15 }, (_, i) => ({
+    id: i,
+    duration: 5 + (i % 5) + 5,   // deterministic, no Math.random()
+    delay: (i * 0.4) % 5,
+}));
+
+const DATA_STREAMS = Array.from({ length: 8 }, (_, i) => i);
+
+const Resume = memo(() => {
+    const handleDownload = useCallback(async () => {
+        try {
+            const response = await fetch('/Resume.pdf');
+            if (!response.ok) throw new Error('File not found');
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Muhammad_Hammad_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+        } catch {
+            window.open('/Resume.pdf', '_blank');
+        }
+    }, []);
+
     return (
         <section id="resume" className="resume-section">
             <div className="resume-bg-overlay"></div>
 
-            {/* Digital Dust / Particles */}
             <div className="digital-dust">
-                {[...Array(15)].map((_, i) => (
+                {DUST_PARTICLES.map((p) => (
                     <motion.div
-                        key={i}
-                        className={`dust-particle dp${i}`}
-                        animate={{
-                            y: [0, -100, 0],
-                            opacity: [0, 0.5, 0],
-                            scale: [1, 1.5, 1]
-                        }}
-                        transition={{
-                            duration: Math.random() * 5 + 5,
-                            repeat: Infinity,
-                            delay: Math.random() * 5
-                        }}
+                        key={p.id}
+                        className={`dust-particle dp${p.id}`}
+                        animate={{ y: [0, -100, 0], opacity: [0, 0.5, 0], scale: [1, 1.5, 1] }}
+                        transition={{ duration: p.duration, repeat: Infinity, delay: p.delay }}
                     />
                 ))}
             </div>
@@ -36,6 +53,7 @@ const Resume = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
                     >
                         Resume
                     </motion.h2>
@@ -44,10 +62,10 @@ const Resume = () => {
 
                 <motion.div
                     className="futuristic-resume-card"
-                    initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                    initial={{ opacity: 0, scale: 0.92, y: 30 }}
                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
                 >
                     <div className="card-glass-effect"></div>
                     <div className="card-glow-border"></div>
@@ -59,9 +77,13 @@ const Resume = () => {
                             animate={{
                                 y: [-15, 15, -15],
                                 rotateY: [0, 10, -10, 0],
-                                filter: ["drop-shadow(0 0 10px #0ea5e9)", "drop-shadow(0 0 20px #0ea5e9)", "drop-shadow(0 0 10px #0ea5e9)"]
+                                filter: [
+                                    'drop-shadow(0 0 10px #0ea5e9)',
+                                    'drop-shadow(0 0 20px #0ea5e9)',
+                                    'drop-shadow(0 0 10px #0ea5e9)'
+                                ]
                             }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                         >
                             <FaFilePdf />
                         </motion.div>
@@ -73,22 +95,21 @@ const Resume = () => {
                     </p>
 
                     <div className="download-btn-wrapper">
-                        <motion.a
-                            href={resumePdf}
-                            download="Hammad.pdf"
+                        <motion.button
+                            onClick={handleDownload}
                             className="futuristic-download-btn"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            style={{ cursor: 'pointer', border: 'none', background: 'none' }}
                         >
                             <FaDownload className="btn-icon" />
                             <span>Download Resume (PDF)</span>
                             <div className="btn-pulse"></div>
-                        </motion.a>
+                        </motion.button>
                     </div>
 
-                    {/* Rise particles inside card */}
                     <div className="card-data-streams">
-                        {[...Array(8)].map((_, i) => (
+                        {DATA_STREAMS.map((i) => (
                             <div key={i} className={`stream s${i}`}></div>
                         ))}
                     </div>
@@ -96,6 +117,6 @@ const Resume = () => {
             </div>
         </section>
     );
-};
+});
 
 export default Resume;

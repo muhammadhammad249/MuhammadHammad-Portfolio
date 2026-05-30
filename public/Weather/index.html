@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1163/1163706.png" />
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/1163/1163706.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="description" content="Premium Weather App - Real-time updates with glassmorphism design." />
+    <title>Live Weather — Accurate Forecasts</title>
+  <script type="module" crossorigin src="./assets/index-Cw7uTk3M.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DojyKmCL.css">
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+    <script>
+        if (window.location.port === "5500") {
+            document.getElementById('root').innerHTML = `
+          <div style="font-family: sans-serif; padding: 50px; text-align: center; background: #1e293b; color: white; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <h1 style="color: #60a5fa;">⚠️ Wrong Server Detected</h1>
+            <p style="font-size: 1.2rem; max-width: 600px; line-height: 1.6;">
+              You are using VS Code's <b>Live Server (Port 5500)</b>. 
+              React apps like this one <b>require</b> the Vite Dev Server to work.
+            </p>
+            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; margin-top: 20px; text-align: left;">
+              <p><b>How to fix this:</b></p>
+              <ol>
+                <li>Stop using the "Go Live" button.</li>
+                <li>Go to the link: <a href="http://localhost:3000" style="color: #60a5fa; font-weight: bold; text-decoration: underline;">http://localhost:3000</a></li>
+                <li>Or double-click the <b>START_APP.bat</b> file in your project folder.</li>
+              </ol>
+            </div>
+          </div>
+        `;
+        }
+    </script>
+
+</body>
+
+</html>
