@@ -1,7 +1,7 @@
 .skills-section {
     position: relative;
-    padding: 80px 0;
-    min-height: 800px;
+    padding: 100px 0;
+    min-height: 950px;
     background: var(--section-bg);
     overflow: hidden;
     color: var(--text-main);
@@ -33,7 +33,7 @@
 .dashboard-wrapper {
     position: relative;
     max-width: 1000px;
-    height: 600px;
+    height: 750px;
     margin: 0 auto;
 }
 

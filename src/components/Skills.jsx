@@ -1,17 +1,19 @@
 import React, { memo, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaGithub } from 'react-icons/fa';
-import { SiTailwindcss } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaGithub, FaWordpress } from 'react-icons/fa';
+import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 import './Skills.css';
 
 // Static data outside component
 const surroundings = [
-    { name: 'HTML5', icon: <FaHtml5 />, pos: { top: '10%', left: '15%' }, delay: 0.1, color: '#e34f26' },
-    { name: 'CSS3', icon: <FaCss3Alt />, pos: { top: '10%', right: '15%' }, delay: 0.2, color: '#1572b6' },
-    { name: 'React.js', icon: <FaReact />, pos: { bottom: '15%', left: '10%' }, delay: 0.3, color: '#61dafb' },
-    { name: 'Tailwind', icon: <SiTailwindcss />, pos: { bottom: '15%', right: '10%' }, delay: 0.4, color: '#06b6d4' },
-    { name: 'Git', icon: <FaGitAlt />, pos: { top: '50%', left: '5%' }, delay: 0.5, color: '#f05032' },
-    { name: 'GitHub', icon: <FaGithub />, pos: { top: '50%', right: '5%' }, delay: 0.6, color: '#ffffff' },
+    { name: 'HTML5', icon: <FaHtml5 />, pos: { top: '5%', left: '15%' }, delay: 0.1, color: '#e34f26' },
+    { name: 'CSS3', icon: <FaCss3Alt />, pos: { top: '5%', right: '15%' }, delay: 0.2, color: '#1572b6' },
+    { name: 'React.js', icon: <FaReact />, pos: { top: '77%', left: '15%' }, delay: 0.3, color: '#61dafb' },
+    { name: 'Tailwind', icon: <SiTailwindcss />, pos: { top: '77%', right: '15%' }, delay: 0.4, color: '#06b6d4' },
+    { name: 'Git', icon: <FaGitAlt />, pos: { top: '53%', left: '5%' }, delay: 0.5, color: '#f05032' },
+    { name: 'GitHub', icon: <FaGithub />, pos: { top: '53%', right: '5%' }, delay: 0.6, color: '#ffffff' },
+    { name: 'WordPress', icon: <FaWordpress />, pos: { top: '29%', left: '5%' }, delay: 0.7, color: '#21759b' },
+    { name: 'Next.js', icon: <SiNextdotjs />, pos: { top: '29%', right: '5%' }, delay: 0.8, color: '#ffffff' },
 ];
 
 const floatingTransition = { duration: 6, repeat: Infinity, ease: 'easeInOut' };
@@ -42,7 +44,7 @@ const Skills = memo(() => (
             <div className="dashboard-wrapper">
                 <svg className="connection-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
                     {[
-                        [15, 10], [85, 10], [10, 85], [90, 85], [5, 50], [95, 50]
+                        [15, 5], [85, 5], [15, 77], [85, 77], [5, 53], [95, 53], [5, 29], [95, 29]
                     ].map(([x2, y2], i) => (
                         <motion.line
                             key={i}
