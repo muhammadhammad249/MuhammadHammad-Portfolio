@@ -113,7 +113,7 @@ const projectsData = [
         description: 'A comprehensive platform connecting livestock buyers and sellers with an easy-to-use interface and secure management features.',
         tech: ['Next.js', 'React', 'Tailwind CSS'],
         image: aiImg,
-        liveLink: 'https://github.com/UsmanAli39326/Livestock_Link_PK',
+        liveLink: 'https://livestocklinkpk.vercel.app',
     }
 ];
 
