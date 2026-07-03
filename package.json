@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev:portfolio": "vite",
+    "dev:islamic": "cd \"public/islamic website 2\" && npm run dev -- -p 3001",
+    "dev:livestock": "cd public/Livestock_Link_PK && npm run dev -- -p 3002",
+    "dev": "concurrently \"npm run dev:portfolio\" \"npm run dev:islamic\" \"npm run dev:livestock\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -20,6 +23,7 @@
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
+    "concurrently": "^10.0.3",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",

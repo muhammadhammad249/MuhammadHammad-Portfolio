@@ -28,6 +28,16 @@ export default defineConfig({
   // Faster dev server
   server: {
     hmr: true,
+    proxy: {
+      '/Livestock_Link_PK': {
+        target: 'http://localhost:3002',
+        changeOrigin: true,
+      },
+      '/islamic-website-2': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+      }
+    }
   },
 
   // Pre-bundle all heavy deps

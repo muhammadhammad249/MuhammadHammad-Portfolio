@@ -13,15 +13,23 @@ import crmImg from '../assets/project-crm.png';
 import weatherImg from '../assets/project-weather.png';
 import aiImg from '../assets/3d-tech.png';
 import loginImg from '../assets/project-login.png';
+import islamicImg from '../assets/project-islamic.png';
 
 // ── Static data outside component so it's never re-created ──
 const projectsData = [
+    {
+        title: 'Islamic Educational Platform',
+        description: 'A modern Islamic educational platform featuring Quran learning, Hadith collections, teacher booking system, and prayer times. Supports English, Arabic, and Urdu languages.',
+        tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'next-intl'],
+        image: islamicImg,
+        liveLink: '/islamic-website-2',
+    },
     {
         title: 'Client Manager Pro',
         description: 'A comprehensive CRM dashboard for efficient client and project management, featuring real-time data visualization.',
         tech: ['React.js', 'Vite', 'Tailwind CSS'],
         image: crmImg,
-        liveLink: '/Client%20Manager%20Pro/index.html',
+        liveLink: '/client-manager-pro/index.html',
     },
     {
         title: 'Weather App',
@@ -36,7 +44,6 @@ const projectsData = [
         tech: ['React.js', 'JavaScript', 'Tailwind CSS', 'Vercel'],
         image: compilerImg,
         liveLink: 'https://jobbridge-sigma.vercel.app',
-        githubLink: 'https://github.com/muhammadhammad249/jobbridge',
     },
     {
         title: 'Modern Landing Page',
@@ -50,7 +57,7 @@ const projectsData = [
         description: 'A clean and secure authentication interface with a modern glassmorphism design and smooth transitions.',
         tech: ['HTML', 'CSS', 'JavaScript'],
         image: loginImg,
-        liveLink: '/login%20page/index.html',
+        liveLink: '/login-page/index.html',
     },
     {
         title: 'Restaurant Website',
@@ -64,7 +71,7 @@ const projectsData = [
         description: 'A productivity app for managing daily tasks and goals with a beautiful gradient interface.',
         tech: ['React.js', 'Vite', 'CSS'],
         image: dailyGoalImg,
-        liveLink: '/Daily%20Goal/index.html',
+        liveLink: '/daily-goal/index.html',
     },
     {
         title: 'Travel Agency Website',
@@ -99,7 +106,14 @@ const projectsData = [
         description: 'A web-based interface for a C-Minus compiler, featuring code editing and compilation.',
         tech: ['C++', 'JavaScript', 'Web'],
         image: compilerImg,
-        liveLink: '/C-minus%20project/web_compiler/index.html',
+        liveLink: '/c-minus-project/web_compiler/index.html',
+    },
+    {
+        title: 'Livestock Link PK',
+        description: 'A comprehensive platform connecting livestock buyers and sellers with an easy-to-use interface and secure management features.',
+        tech: ['Next.js', 'React', 'Tailwind CSS'],
+        image: aiImg,
+        liveLink: '/Livestock_Link_PK',
     }
 ];
 

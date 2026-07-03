@@ -2,6 +2,7 @@ import React, { memo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { FaFilePdf, FaDownload } from 'react-icons/fa';
 import './Resume.css';
+import resumePdf from '../assets/Hammad.pdf';
 
 // Static particle data outside component
 const DUST_PARTICLES = Array.from({ length: 15 }, (_, i) => ({
@@ -15,7 +16,8 @@ const DATA_STREAMS = Array.from({ length: 8 }, (_, i) => i);
 const Resume = memo(() => {
     const handleDownload = useCallback(async () => {
         try {
-            const response = await fetch('/Resume.pdf');
+            // Append a timestamp to the fetch URL to completely bypass IDM cache/duplicate link detection
+            const response = await fetch(`${resumePdf}?t=${new Date().getTime()}`);
             if (!response.ok) throw new Error('File not found');
             const blob = await response.blob();
             const url = window.URL.createObjectURL(blob);
@@ -27,7 +29,7 @@ const Resume = memo(() => {
             document.body.removeChild(link);
             window.URL.revokeObjectURL(url);
         } catch {
-            window.open('/Resume.pdf', '_blank');
+            window.open(resumePdf, '_blank');
         }
     }, []);
 
