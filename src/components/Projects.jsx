@@ -22,7 +22,7 @@ const projectsData = [
         description: 'A modern Islamic educational platform featuring Quran learning, Hadith collections, teacher booking system, and prayer times. Supports English, Arabic, and Urdu languages.',
         tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'next-intl'],
         image: islamicImg,
-        liveLink: '/islamic-website-2',
+        liveLink: 'https://islamic-educational-platform.vercel.app',
     },
     {
         title: 'Client Manager Pro',
@@ -113,7 +113,7 @@ const projectsData = [
         description: 'A comprehensive platform connecting livestock buyers and sellers with an easy-to-use interface and secure management features.',
         tech: ['Next.js', 'React', 'Tailwind CSS'],
         image: aiImg,
-        liveLink: '/Livestock_Link_PK',
+        liveLink: 'https://github.com/UsmanAli39326/Livestock_Link_PK',
     }
 ];
 
