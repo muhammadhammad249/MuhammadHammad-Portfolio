@@ -312,5 +312,56 @@
 
     .projects-main-title {
         font-size: 2.5rem;
+        letter-spacing: -1px;
+    }
+
+    .projects-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-section {
+        padding: 40px 0;
+    }
+
+    .projects-main-title {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+        letter-spacing: -0.5px;
+    }
+
+    .projects-layout {
+        gap: 1.5rem;
+        padding: 0 0.75rem;
+    }
+
+    .cyber-project-card {
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .project-title-glow {
+        font-size: 1.2rem;
+    }
+
+    .project-desc {
+        font-size: 0.85rem;
+        min-height: auto;
+    }
+
+    .tech-tag-cyber {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
+
+    .project-visual {
+        border-radius: 12px;
+        margin-bottom: 1rem;
+    }
+
+    .cyber-btn {
+        padding: 10px;
+        font-size: 0.9rem;
     }
 }

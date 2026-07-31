@@ -180,41 +180,85 @@ body.theme-light .floating-card {
     }
 
     .floating-card {
-        width: 200px;
+        width: 180px;
     }
 
     .card-1 {
+        top: 5%;
         left: 5%;
     }
 
     .card-2 {
+        top: 10%;
         right: 5%;
     }
 
     .card-3 {
-        bottom: 10%;
-        left: 15%;
+        bottom: 5%;
+        left: 25%;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 100px 15px 30px;
+        min-height: 100vh;
+    }
+
+    .hero-container {
+        gap: 1rem;
+    }
+
     .hero-title {
-        font-size: 1.85rem;
-        letter-spacing: 0.5px;
+        font-size: 1.8rem;
+        letter-spacing: 0px;
+        margin-bottom: 0.75rem;
     }
 
     .hero-subtitle {
         font-size: 0.95rem;
         line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-cta {
+        gap: 0.75rem;
+    }
+
+    .hero-cyber-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+        min-height: 44px;
+    }
+
+    .hero-right {
+        height: 220px;
+        margin-top: 1rem;
     }
 
     .floating-card {
-        width: 160px;
-        border-radius: 16px;
+        width: 100px;
+        border-radius: 10px;
     }
 
     .floating-card img {
-        height: 200px;
+        height: 120px;
+    }
+
+    .card-1 {
+        top: 0%;
+        left: 2%;
+    }
+
+    .card-2 {
+        top: 5%;
+        right: 2%;
+    }
+
+    .card-3 {
+        bottom: 5%;
+        left: 50%;
+        margin-left: -50px;
     }
 }
 

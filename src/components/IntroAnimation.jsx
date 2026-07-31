@@ -107,17 +107,7 @@ const useTypewriter = (text, speed = 55, startDelay = 0) => {
   return { displayed, done };
 };
 
-/* ── Tech icons data ── */
-const TECH_ICONS = [
-  { icon: '⚛️', label: 'React', delay: 0 },
-  { icon: '▲', label: 'Next.js', delay: 0.15 },
-  { icon: '🟩', label: 'Node.js', delay: 0.3 },
-  { icon: '🍃', label: 'MongoDB', delay: 0.45 },
-  { icon: '⚡', label: 'Vite', delay: 0.6 },
-  { icon: '🎨', label: 'CSS3', delay: 0.75 },
-  { icon: '🔷', label: 'TypeScript', delay: 0.9 },
-  { icon: '🐙', label: 'Git', delay: 1.05 },
-];
+
 
 /* ── Scene timing (ms) ── */
 const SCENE_TIMINGS = [0, 800, 1700, 2800, 4100, 5300];
@@ -231,45 +221,22 @@ const IntroAnimation = ({ onFinish }) => {
             )}
           </AnimatePresence>
 
-          {/* ── Scene 4: Tech icons ── */}
-          <AnimatePresence>
-            {scene >= 4 && (
-              <div className="intro-icons-ring" key="icons">
-                {TECH_ICONS.map((t, i) => (
-                  <motion.div
-                    className="intro-icon-pill"
-                    key={t.label}
-                    initial={{ opacity: 0, scale: 0.5, y: 20 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{
-                      delay: t.delay,
-                      duration: 0.5,
-                      type: 'spring',
-                      stiffness: 200,
-                      damping: 14,
-                    }}
-                    style={{ '--icon-index': i }}
-                  >
-                    <span className="intro-icon-emoji">{t.icon}</span>
-                    <span className="intro-icon-label">{t.label}</span>
-                  </motion.div>
-                ))}
-              </div>
-            )}
-          </AnimatePresence>
+
 
           {/* ── Scene 5: Tagline ── */}
           <AnimatePresence>
             {scene >= 5 && (
-              <motion.p
-                className="intro-tagline"
-                key="tagline"
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.65, ease: 'easeOut' }}
-              >
-                "Crafting Modern, Scalable &amp; User-Centric Web Experiences"
-              </motion.p>
+              <div className="intro-tagline-wrapper">
+                <motion.p
+                  className="intro-tagline"
+                  key="tagline"
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.75, ease: "easeOut" }}
+                >
+                  Crafting Modern, Scalable &amp; User-Centric Web Experiences
+                </motion.p>
+              </div>
             )}
           </AnimatePresence>
         </motion.div>

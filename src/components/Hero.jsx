@@ -125,7 +125,7 @@ const Hero = memo(() => {
                             animate={{ y: [-10, 10, -10], rotate: [-5, -2, -5] }}
                             transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
                         >
-                            <img src={project1} alt="Restaurant Project" width="300" height="200" loading="eager" fetchpriority="high" />
+                            <img src={project1} alt="Restaurant Project" width="300" height="200" loading="eager" fetchPriority="high" />
                         </motion.div>
                         <motion.div
                             className="floating-card card-2"

@@ -116,7 +116,7 @@
     border: 1px solid rgba(247, 223, 30, 0.3);
 }
 
-.floating-card {
+.skills-section .floating-card {
     position: absolute;
     transform-origin: center;
 }
@@ -334,7 +334,7 @@
 
     .skill-card,
     .center-card,
-    .floating-card,
+    .skills-section .floating-card,
     .center-card-wrapper {
         position: static;
         transform: none !important;

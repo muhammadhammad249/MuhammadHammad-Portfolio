@@ -311,8 +311,17 @@
 }
 
 @media (max-width: 768px) {
+    .resume-section {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
     .resume-title {
         font-size: 2.2rem;
+    }
+
+    .resume-title-wrapper {
+        margin-bottom: 3rem;
     }
 
     .futuristic-resume-card {
@@ -331,5 +340,64 @@
     .light-cylinder {
         width: 100px;
         height: 160px;
+    }
+
+    .resume-description {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-section {
+        padding: 40px 0;
+    }
+
+    .resume-title {
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+    }
+
+    .resume-title-wrapper {
+        margin-bottom: 2rem;
+    }
+
+    .futuristic-resume-card {
+        padding: 2rem 1.25rem;
+        margin: 0 0.75rem;
+        border-radius: 20px;
+    }
+
+    .hologram-icon {
+        font-size: 3.5rem;
+    }
+
+    .hologram-container {
+        height: 160px;
+        margin-bottom: 1.5rem;
+    }
+
+    .light-cylinder {
+        width: 80px;
+        height: 130px;
+    }
+
+    .hologram-base {
+        width: 80px;
+        height: 15px;
+    }
+
+    .resume-description {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .futuristic-download-btn {
+        padding: 1rem 2rem;
+        font-size: 0.95rem;
+        gap: 0.75rem;
+    }
+
+    .title-streak {
+        width: 150px;
     }
 }
