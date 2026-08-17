@@ -124,7 +124,7 @@ const IntroAnimation = ({ onFinish }) => {
 
   // Role typewriter (starts at scene 3)
   const { displayed: roleText, done: roleTyped } = useTypewriter(
-    'Frontend Developer',
+    'Full Stack Developer',
     60,
     scene >= 3 ? 0 : 999999
   );

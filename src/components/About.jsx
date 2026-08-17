@@ -24,7 +24,7 @@ const About = memo(() => (
                     <h2 className="section-title-alt">About Me</h2>
                     <div className="about-text-content">
                         <p className="lead-text">
-                            I am a passionate Frontend Developer specializing in building responsive and interactive web applications using React.js.
+                            I am a passionate Full Stack Developer specializing in building responsive and interactive web applications using React.js.
                         </p>
                         <p className="description-text">
                             With a strong foundation in modern web technologies, I focus on creating seamless user experiences and clean, maintainable code. My journey in web development is driven by a curiosity to learn and a desire to build impactful solutions.

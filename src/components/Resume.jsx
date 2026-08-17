@@ -1,8 +1,8 @@
-import React, { memo, useCallback } from 'react';
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
-import { FaFilePdf, FaDownload } from 'react-icons/fa';
+import { FaFilePdf, FaDownload, FaEye } from 'react-icons/fa';
 import './Resume.css';
-import resumePdf from '../assets/Hammad.pdf';
+import resumePdf from '../assets/Resume.pdf';
 
 // Static particle data outside component
 const DUST_PARTICLES = Array.from({ length: 15 }, (_, i) => ({
@@ -14,24 +14,6 @@ const DUST_PARTICLES = Array.from({ length: 15 }, (_, i) => ({
 const DATA_STREAMS = Array.from({ length: 8 }, (_, i) => i);
 
 const Resume = memo(() => {
-    const handleDownload = useCallback(async () => {
-        try {
-            // Append a timestamp to the fetch URL to completely bypass IDM cache/duplicate link detection
-            const response = await fetch(`${resumePdf}?t=${new Date().getTime()}`);
-            if (!response.ok) throw new Error('File not found');
-            const blob = await response.blob();
-            const url = window.URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = 'Muhammad_Hammad_Resume.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            window.URL.revokeObjectURL(url);
-        } catch {
-            window.open(resumePdf, '_blank');
-        }
-    }, []);
 
     return (
         <section id="resume" className="resume-section">
@@ -93,21 +75,36 @@ const Resume = memo(() => {
                     </div>
 
                     <p className="resume-description">
-                        You can download my resume to learn more about my experience, skills, and projects.
+                        You can view or download my resume to learn more about my experience, skills, and projects.
                     </p>
 
-                    <div className="download-btn-wrapper">
-                        <motion.button
-                            onClick={handleDownload}
+                    <div className="download-btn-wrapper" style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                        <motion.a
+                            href={resumePdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="futuristic-download-btn"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            style={{ cursor: 'pointer', border: 'none', background: 'none' }}
+                            style={{ cursor: 'pointer', border: 'none', background: 'none', textDecoration: 'none' }}
+                        >
+                            <FaEye className="btn-icon" />
+                            <span>View Resume</span>
+                            <div className="btn-pulse"></div>
+                        </motion.a>
+
+                        <motion.a
+                            href={resumePdf}
+                            download="Muhammad_Hammad_Resume.pdf"
+                            className="futuristic-download-btn"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            style={{ cursor: 'pointer', border: 'none', background: 'none', textDecoration: 'none' }}
                         >
                             <FaDownload className="btn-icon" />
-                            <span>Download Resume (PDF)</span>
+                            <span>Download Resume</span>
                             <div className="btn-pulse"></div>
-                        </motion.button>
+                        </motion.a>
                     </div>
 
                     <div className="card-data-streams">

@@ -14,7 +14,7 @@ const Footer = () => {
                         <FaLinkedin />
                     </a>
                 </div>
-                <p>&copy; 2025 Muhammad Hammad — Frontend Developer. All rights reserved.</p>
+                <p>&copy; 2025 Muhammad Hammad — Full Stack Developer. All rights reserved.</p>
             </div>
         </footer>
     );
