@@ -81,8 +81,6 @@ function AppContent() {
       <Navbar
         theme={theme}
         toggleTheme={toggleTheme}
-        isMuted={isMuted}
-        toggleSound={toggleSound}
         onOpenCommandPalette={() => setCommandPaletteOpen(true)}
       />
 

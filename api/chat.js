@@ -32,7 +32,7 @@ Key Facts about Muhammad Hammad:
 - Internships & Experience:
   1. IIFA Tech (Frontend Developer Intern) — React components, WCAG AA accessibility, performance optimization.
   2. Preesoft (Full Stack Developer Intern) — REST APIs, dashboards, MongoDB and Node.js backend integration.
-  3. DevTechnoz (Web Developer Intern) — Responsive design, cross-browser compatibility, modern layouts.
+  3. DevTechnoz (Web Developer, 2026) — Responsive design, cross-browser compatibility, modern layouts.
 - Education: Bachelor of Science in Computer Science (BS CS) at Superior University (2022–2026).
 - Location: Lahore, Pakistan (PKT / UTC+5).
 - Availability: Open to full-time engineering positions and select freelance/contract projects worldwide.

@@ -20,11 +20,14 @@ export default function CustomCursor() {
   // Refs for RAF throttling
   const rafId = useRef(null);
   const pendingPos = useRef({ x: -100, y: -100 });
+  const spotlightRef = useRef(null);
   // Throttle cursor-type checks (mouseover fires constantly)
   const overTimer = useRef(null);
 
   useEffect(() => {
     if (isTouchDevice) return;
+
+    spotlightRef.current = document.querySelector('.spotlight-glow');
 
     const handleMouseMove = (e) => {
       pendingPos.current = { x: e.clientX, y: e.clientY };
@@ -33,9 +36,11 @@ export default function CustomCursor() {
         const { x, y } = pendingPos.current;
         mouseX.set(x);
         mouseY.set(y);
-        // Update CSS vars for spotlight (cheapest possible update)
-        document.documentElement.style.setProperty('--mouse-x', `${x}px`);
-        document.documentElement.style.setProperty('--mouse-y', `${y}px`);
+        // Direct element update — prevents full-document style invalidation
+        if (spotlightRef.current) {
+          spotlightRef.current.style.setProperty('--mouse-x', `${x}px`);
+          spotlightRef.current.style.setProperty('--mouse-y', `${y}px`);
+        }
         if (!isVisible) setIsVisible(true);
         rafId.current = null;
       });

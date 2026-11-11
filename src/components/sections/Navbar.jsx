@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSun, FaMoon, FaFire, FaVolumeUp, FaVolumeMute, FaSearch, FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaSun, FaMoon, FaFire, FaSearch, FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { portfolioData } from '../../data/portfolioData';
 import { useSound } from '../../hooks/useSound';
 import './Navbar.css';
@@ -18,8 +18,6 @@ const NAV_LINKS = [
 export default function Navbar({
   theme,
   toggleTheme,
-  isMuted,
-  toggleSound,
   onOpenCommandPalette
 }) {
   const [scrolled, setScrolled] = useState(false);
@@ -27,20 +25,28 @@ export default function Navbar({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { playClick, playWhoosh } = useSound();
 
-  // Scroll detection & active section indicator
+  // Throttled 60fps scroll detection & active section indicator
   useEffect(() => {
+    let ticking = false;
+    const sections = ['home', 'about', 'bento', 'projects', 'skills', 'experience', 'services', 'contact'];
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          setScrolled(scrollY > 40);
 
-      const sections = ['home', 'about', 'bento', 'projects', 'skills', 'experience', 'services', 'contact'];
-      const scrollPos = window.scrollY + 200;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el && el.offsetTop <= scrollPos) {
-          setActiveSection(sections[i]);
-          break;
-        }
+          const scrollPos = scrollY + 200;
+          for (let i = sections.length - 1; i >= 0; i--) {
+            const el = document.getElementById(sections[i]);
+            if (el && el.offsetTop <= scrollPos) {
+              setActiveSection(sections[i]);
+              break;
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -113,18 +119,6 @@ export default function Navbar({
             >
               <FaSearch className="ctrl-icon" />
               <span className="cmd-shortcut-tag">⌘K</span>
-            </button>
-
-            {/* Sound FX Toggle */}
-            <button
-              className="nav-ctrl-btn"
-              onClick={() => {
-                toggleSound();
-              }}
-              title={isMuted ? 'Unmute Sound FX' : 'Mute Sound FX'}
-              aria-label="Toggle Sound Effects"
-            >
-              {isMuted ? <FaVolumeMute className="ctrl-icon muted" /> : <FaVolumeUp className="ctrl-icon active" />}
             </button>
 
             {/* Theme Toggle Button */}

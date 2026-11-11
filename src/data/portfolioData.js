@@ -448,11 +448,11 @@ export const portfolioData = {
     },
     {
       id: 'devtechnoz',
-      role: 'Web Developer Intern',
+      role: 'Web Developer',
       company: 'DevTechnoz',
       location: 'Pakistan',
-      period: '2023',
-      type: 'Internship',
+      period: '2026',
+      type: 'Web Engineering',
       badge: 'Web Development',
       description: 'Crafted bespoke client websites, landing pages, and interactive web elements.',
       responsibilities: [

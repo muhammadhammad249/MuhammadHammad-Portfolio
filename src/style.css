@@ -229,6 +229,7 @@ code, pre, .mono {
   inset: 0;
   pointer-events: none;
   z-index: 0;
+  transform: translateZ(0);
   background: radial-gradient(
     550px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh),
     rgba(124, 58, 237, 0.07),

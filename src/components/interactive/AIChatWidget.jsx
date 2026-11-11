@@ -61,7 +61,7 @@ function generateSmartResponse(input) {
 
   // Internships & Work Experience
   if (q.includes('experience') || q.includes('intern') || q.includes('job') || q.includes('company') || q.includes('work history') || q.includes('career')) {
-    return "Hammad has completed 3 rigorous software engineering internships:\n1. IIFA Tech — Frontend Developer Intern (React components, WCAG AA accessibility, performance optimization)\n2. Preesoft — Full Stack Intern (REST APIs, admin dashboards, MongoDB & Node.js backend integration)\n3. DevTechnoz — Web Developer Intern (Responsive layouts, cross-browser compatibility, modern UI)";
+    return "Hammad's professional software engineering experience includes:\n1. IIFA Tech — Frontend Developer Intern (React components, WCAG AA accessibility, performance optimization)\n2. Preesoft — Full Stack Intern (REST APIs, admin dashboards, MongoDB & Node.js backend integration)\n3. DevTechnoz — Web Developer (Responsive layouts, cross-browser compatibility, modern UI)";
   }
 
   // Education
