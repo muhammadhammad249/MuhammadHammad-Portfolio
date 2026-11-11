@@ -471,7 +471,7 @@ export const portfolioData = {
       degree: 'Bachelor of Science in Computer Science (BS CS)',
       institution: 'Superior University',
       location: 'Lahore, Pakistan',
-      period: '2022 – 2026 (In Progress)',
+      period: '2022 – 2026',
       badge: 'Undergraduate',
       description: 'Rigorous computer science curriculum focusing on software architecture, algorithms, and web engineering.',
       coursework: [
