@@ -48,7 +48,7 @@ export const portfolioData = {
     aboutParagraphs: [
       'I approach software engineering with the mindset of an architect and the precision of an artisan. Every interaction, transition, and line of code is measured for speed, clarity, and visual impact.',
       'Having worked through rigorous internships at IIFA Tech, Preesoft, and DevTechnoz, I have tackled everything from complex state-driven dashboards to multilingual educational platforms and scalable marketplaces.',
-      'Currently pursuing my Bachelor of Science in Computer Science at Superior University, I continuously blend deep algorithmic principles with modern frontend aesthetics to push what is possible on the web.'
+      'Having completed my Bachelor of Science in Computer Science at Superior University (2022–2026), I continuously blend deep algorithmic principles with modern frontend aesthetics to push what is possible on the web.'
     ],
     email: 'muhammadhammadjato65@gmail.com',
     location: {
