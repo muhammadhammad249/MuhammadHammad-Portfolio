@@ -472,7 +472,7 @@ export const portfolioData = {
       institution: 'Superior University',
       location: 'Lahore, Pakistan',
       period: '2022 – 2026',
-      badge: 'Undergraduate',
+      badge: 'Graduate',
       description: 'Rigorous computer science curriculum focusing on software architecture, algorithms, and web engineering.',
       coursework: [
         'Data Structures & Algorithms',
@@ -690,10 +690,10 @@ export const portfolioData = {
   achievements: [
     {
       id: 'superior-honor',
-      title: 'BS Computer Science Progression',
+      title: 'BS Computer Science Graduate',
       issuer: 'Superior University',
       year: '2022–2026',
-      description: 'Active computer science undergraduate pursuing advanced software engineering and web systems.'
+      description: 'Computer Science graduate with specialized focus on software architecture, algorithms, and web engineering.'
     },
     {
       id: 'internship-excellence',

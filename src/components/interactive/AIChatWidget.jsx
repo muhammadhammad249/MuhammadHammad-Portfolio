@@ -66,7 +66,7 @@ function generateSmartResponse(input) {
 
   // Education
   if (q.includes('education') || q.includes('university') || q.includes('degree') || q.includes('college') || q.includes('superior') || q.includes('study') || q.includes('academic') || q.includes('bs cs')) {
-    return "Hammad is currently completing his Bachelor of Science in Computer Science (BS CS) at Superior University in Pakistan (2022–2026), combining algorithmic problem-solving with modern software engineering.";
+    return "Hammad holds a Bachelor of Science in Computer Science (BS CS) from Superior University in Pakistan (2022–2026), combining algorithmic problem-solving with modern software engineering.";
   }
 
   // Hiring, Availability & Freelance
