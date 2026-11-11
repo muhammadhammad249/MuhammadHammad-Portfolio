@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://muhammad-hammad-portfolio.vercel.app/sitemap.xml
+

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1021" />
+      <stop offset="50%" stop-color="#05060A" />
+      <stop offset="100%" stop-color="#0A0B18" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED" />
+      <stop offset="35%" stop-color="#6366F1" />
+      <stop offset="70%" stop-color="#22D3EE" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.2" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <style>
+    @media (prefers-color-scheme: light) {
+      .bg-rect { fill: #0B0F19; }
+    }
+  </style>
+  <rect class="bg-rect" width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <rect width="504" height="504" x="4" y="4" rx="124" fill="none" stroke="url(#borderGrad)" stroke-width="8" opacity="0.9" />
+  
+  <!-- Subtle inner mesh lines -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#brandGrad)" stroke-width="1.5" stroke-dasharray="8 12" opacity="0.25" />
+  <circle cx="256" cy="256" r="220" fill="none" stroke="url(#brandGrad)" stroke-width="1" opacity="0.15" />
+
+  <!-- Monogram MH Graphic -->
+  <g filter="url(#glow)">
+    <!-- Letter M -->
+    <path d="M 112 360 L 112 152 L 184 270 L 256 152 L 256 360" 
+          fill="none" 
+          stroke="url(#brandGrad)" 
+          stroke-width="36" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+
+    <!-- Letter H -->
+    <path d="M 288 152 L 288 360 M 288 256 L 400 256 M 400 152 L 400 360" 
+          fill="none" 
+          stroke="url(#brandGrad)" 
+          stroke-width="36" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+  </g>
+</svg>
+

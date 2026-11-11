@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prolixus | Premium Organic Products & Precision Formulation</title>
+  <meta name="description" content="Shop nature's finest organic ingredients and precision droppers, curated for your holistic well-being with full lab certificates and seamless subscriptions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #090B10;
+      color: #F3F4F6;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+
+    :root {
+      --bg-dark: #090B10;
+      --bg-card: #111520;
+      --border: rgba(255, 255, 255, 0.08);
+      --accent-gold: #D4AF37;
+      --accent-emerald: #10B981;
+      --text-muted: #9CA3AF;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(9, 11, 16, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-badge {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--accent-gold);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 2px 8px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #FFFFFF;
+    }
+    .nav-btn {
+      padding: 10px 22px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #D4AF37, #F3E5AB);
+      color: #090B10;
+      font-weight: 700;
+      font-size: 13px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .nav-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      padding-top: 150px;
+      padding-bottom: 90px;
+      background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 50px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 16px;
+    }
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero-title span {
+      font-style: italic;
+      color: var(--accent-gold);
+    }
+    .hero-desc {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-btn-primary {
+      padding: 14px 32px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #D4AF37, #B89628);
+      color: #090B10;
+      font-weight: 700;
+      font-size: 14px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .hero-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    }
+    .hero-btn-secondary {
+      padding: 14px 28px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    .hero-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-image-card {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+    }
+    .hero-image-card img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+    .hero-img-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(9, 11, 16, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      padding: 12px 20px;
+      border-radius: var(--radius-lg);
+    }
+    .badge-label {
+      font-size: 11px;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .badge-val {
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    /* Benefits Grid */
+    .benefits {
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .section-subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 50px auto;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .benefit-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(212, 175, 55, 0.4);
+    }
+    .benefit-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(212, 175, 55, 0.1);
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .benefit-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .benefit-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Features Strip */
+    .features-strip {
+      padding: 50px 0;
+      background: rgba(212, 175, 55, 0.03);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .strip-flex {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 24px;
+      text-align: center;
+    }
+    .strip-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: var(--accent-gold);
+      font-weight: 700;
+    }
+    .strip-item p {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 60px 0 30px 0;
+      background: #05070A;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+    .footer-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .footer-bottom {
+      font-size: 12px;
+      color: #6B7280;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-title { font-size: 38px; }
+      .hero-ctas { justify-content: center; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="nav-logo">
+        PROLIXUS
+        <span class="logo-badge">Organic</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#hero">Overview</a>
+        <a href="#benefits">Standards</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#features">Verification</a>
+      </nav>
+      <a href="https://github.com/UsmanAli39326/Prolixus" target="_blank" rel="noopener noreferrer" class="nav-btn">
+        View Codebase
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            DISCOVER THE POWER OF PREMIUM
+          </div>
+          <h1 class="hero-title">
+            Pure drops, perfect precision <span>care you can trust.</span>
+          </h1>
+          <p class="hero-desc">
+            Experience the perfect balance of purity and precision with our premium oil droppers. Designed for effortless application, our high-quality droppers ensure accurate dispensing, minimal waste, and maximum potency.
+          </p>
+          <div class="hero-ctas">
+            <a href="#benefits" class="hero-btn-primary">Explore Platform</a>
+            <a href="https://github.com/UsmanAli39326/Prolixus" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary">GitHub Repository</a>
+          </div>
+        </div>
+
+        <div class="hero-image-card">
+          <img src="./public/images/new/prolixus-hero-banner.jpeg" onerror="this.onerror=null; this.src='/Prolixus/public/images/new/prolixus-hero-banner.jpeg';" alt="Prolixus Premium Organic Products" />
+          <div class="hero-img-badge">
+            <div class="badge-label">Laboratory Certified</div>
+            <div class="badge-val">100% Pure Organic Extracts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Metrics Strip -->
+  <section id="features" class="features-strip">
+    <div class="container">
+      <div class="strip-flex">
+        <div class="strip-item">
+          <h4>100%</h4>
+          <p>Organic Certified</p>
+        </div>
+        <div class="strip-item">
+          <h4>Stripe &amp; PayPal</h4>
+          <p>Secure Subscriptions</p>
+        </div>
+        <div class="strip-item">
+          <h4>EN / DE</h4>
+          <p>Full Localization</p>
+        </div>
+        <div class="strip-item">
+          <h4>Next.js 16</h4>
+          <p>Sub-Second Performance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="benefits">
+    <div class="container">
+      <h2 class="section-title">Engineered For Purity &amp; Performance</h2>
+      <p class="section-subtitle">A full-stack e-commerce architecture combining modern payment pipelines, multilingual catalogs, and customer order management.</p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🌿</div>
+          <h3 class="benefit-title">Curated Natural Extracts</h3>
+          <p class="benefit-desc">Ethically harvested ingredients processed under stringent GMP conditions to retain maximum therapeutic benefits and terpenes.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">💳</div>
+          <h3 class="benefit-title">Stripe &amp; PayPal Checkout</h3>
+          <p class="benefit-desc">Seamless recurring subscriptions and one-time orders with automated PDF invoice generation via jsPDF.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">🔬</div>
+          <h3 class="benefit-title">Third-Party Lab Certificates</h3>
+          <p class="benefit-desc">Every batch is verified through independent third-party laboratories with interactive QR code authenticity verification.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">📦</div>
+          <h3 class="benefit-title">Customer Order Dashboard</h3>
+          <p class="benefit-desc">Dedicated member portal with real-time order tracking, shipment tracking numbers, and subscription pause/resume controls.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Section -->
+  <section id="catalog" class="benefits" style="background: rgba(255, 255, 255, 0.01);">
+    <div class="container">
+      <h2 class="section-title">Organic Formulations &amp; Droppers</h2>
+      <p class="section-subtitle">Precision-measured natural wellness droppers, bottled in UV-protective Miron glass with independent laboratory batch analysis.</p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="badge-label" style="margin-bottom: 8px;">Full Spectrum • 1500mg</div>
+          <h3 class="benefit-title">Pure Herbal Essence Dropper</h3>
+          <p class="benefit-desc">Cold-pressed botanical extract infused with natural hemp terpenes and MCT carrier oil for rapid bioavailability.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border);">
+            <span style="font-size: 20px; font-weight: 700; color: var(--accent-gold);">&euro;49.95</span>
+            <span class="logo-badge">In Stock</span>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="badge-label" style="margin-bottom: 8px;">Night Recovery • 3000mg</div>
+          <h3 class="benefit-title">Deep Sleep Botanical Elixir</h3>
+          <p class="benefit-desc">Formulated with calming chamomile terpenes and organic broad-spectrum phytocannabinoids to restore REM sleep cycles.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border);">
+            <span style="font-size: 20px; font-weight: 700; color: var(--accent-gold);">&euro;64.95</span>
+            <span class="logo-badge">Subscribe &amp; Save 15%</span>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="badge-label" style="margin-bottom: 8px;">Daily Focus • 1000mg</div>
+          <h3 class="benefit-title">Vitality Terpene Dropper</h3>
+          <p class="benefit-desc">Citrus-infused morning clarity blend with organic limonene terpenes designed for high-stress cognitive work.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border);">
+            <span style="font-size: 20px; font-weight: 700; color: var(--accent-gold);">&euro;44.95</span>
+            <span class="logo-badge">In Stock</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">PROLIXUS</div>
+      <p class="footer-desc">Next.js • Tailwind CSS • Stripe &amp; PayPal • Full-Stack E-Commerce &amp; Subscriptions Platform</p>
+      <div class="footer-bottom">
+        &copy; 2026 Prolixus Platform. Developed by Muhammad Hammad.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

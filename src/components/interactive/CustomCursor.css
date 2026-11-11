@@ -1,0 +1,109 @@
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  margin-top: -18px;
+  margin-left: -18px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent-cyan);
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.25s var(--ease-out-expo),
+              height 0.25s var(--ease-out-expo),
+              border-color 0.25s ease,
+              background-color 0.25s ease;
+  will-change: transform;
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  margin-left: -3px;
+  border-radius: 50%;
+  background-color: var(--accent-cyan);
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  will-change: transform;
+}
+
+/* Link Hover State */
+.custom-cursor-ring.cursor-link {
+  width: 52px;
+  height: 52px;
+  margin-top: -26px;
+  margin-left: -26px;
+  border-color: var(--accent-violet);
+  background: rgba(124, 58, 237, 0.12);
+  backdrop-filter: blur(2px);
+}
+.custom-cursor-dot.cursor-link {
+  opacity: 0;
+}
+
+/* View State for Project Cards */
+.custom-cursor-ring.cursor-view {
+  width: 68px;
+  height: 68px;
+  margin-top: -34px;
+  margin-left: -34px;
+  background: rgba(124, 58, 237, 0.85);
+  border-color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+}
+.custom-cursor-dot.cursor-view {
+  opacity: 0;
+}
+
+/* Drag State for Bubbles & Carousels */
+.custom-cursor-ring.cursor-drag {
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  background: rgba(34, 211, 238, 0.2);
+  border-color: var(--accent-cyan);
+}
+.custom-cursor-dot.cursor-drag {
+  opacity: 0;
+}
+
+/* Text State */
+.custom-cursor-ring.cursor-text {
+  width: 4px;
+  height: 24px;
+  margin-top: -12px;
+  margin-left: -2px;
+  border-radius: 2px;
+  background: var(--accent-cyan);
+  border: none;
+}
+.custom-cursor-dot.cursor-text {
+  opacity: 0;
+}
+
+.cursor-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .custom-cursor-ring,
+  .custom-cursor-dot {
+    display: none !important;
+  }
+}
+

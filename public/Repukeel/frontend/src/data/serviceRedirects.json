@@ -1,0 +1,277 @@
+[
+  {
+    "source": "/services/tiktok-content-removal",
+    "destination": "/content-removal/tiktok-content-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/mugshot-removal-suppression",
+    "destination": "/content-removal/mugshot-removal-suppression",
+    "permanent": true
+  },
+  {
+    "source": "/services/bbb-review-removal",
+    "destination": "/content-removal/bbb-review-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/facebook-review-removal",
+    "destination": "/content-removal/facebook-review-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/instagram-content-removal",
+    "destination": "/content-removal/instagram-content-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/fake-review-removal",
+    "destination": "/content-removal/fake-review-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/travel-hospitality-review-removal",
+    "destination": "/content-removal/travel-hospitality-review-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/trustpilot-review-removal",
+    "destination": "/content-removal/trustpilot-review-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/ripoff-report-removal",
+    "destination": "/content-removal/ripoff-report-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/indeed-review-removal",
+    "destination": "/content-removal/indeed-review-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/twitter-x-content-removal",
+    "destination": "/content-removal/twitter-x-content-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/google-review-removal",
+    "destination": "/content-removal/google-review-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/awdtsg-removal",
+    "destination": "/dating-reputation/awdtsg-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/awdtsg-checker-search",
+    "destination": "/dating-reputation/awdtsg-checker-search",
+    "permanent": true
+  },
+  {
+    "source": "/services/image-protection",
+    "destination": "/dating-reputation/image-protection",
+    "permanent": true
+  },
+  {
+    "source": "/services/social-media-takedowns",
+    "destination": "/dating-reputation/social-media-takedowns",
+    "permanent": true
+  },
+  {
+    "source": "/services/monitoring-packages",
+    "destination": "/dating-reputation/monitoring-packages",
+    "permanent": true
+  },
+  {
+    "source": "/services/dating-coach-support",
+    "destination": "/dating-reputation/dating-coach-support",
+    "permanent": true
+  },
+  {
+    "source": "/services/tea-app-checker-removal",
+    "destination": "/dating-reputation/tea-app-checker-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/background-check-cleanup",
+    "destination": "/job-reputation/background-check-cleanup",
+    "permanent": true
+  },
+  {
+    "source": "/services/licensing-risk-removal",
+    "destination": "/job-reputation/licensing-risk-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/glassdoor-employer-review-cleanup",
+    "destination": "/job-reputation/glassdoor-employer-review-cleanup",
+    "permanent": true
+  },
+  {
+    "source": "/services/linkedin-search-visibility-repair",
+    "destination": "/job-reputation/linkedin-search-visibility-repair",
+    "permanent": true
+  },
+  {
+    "source": "/services/employer-response-reference-repair",
+    "destination": "/job-reputation/employer-response-reference-repair",
+    "permanent": true
+  },
+  {
+    "source": "/services/awdtsg-monitoring-scan-alerts",
+    "destination": "/monitoring-alerts/awdtsg-monitoring-scan-alerts",
+    "permanent": true
+  },
+  {
+    "source": "/services/social-media-reputation-monitoring",
+    "destination": "/monitoring-alerts/social-media-reputation-monitoring",
+    "permanent": true
+  },
+  {
+    "source": "/services/dark-web-data-leak-monitoring",
+    "destination": "/monitoring-alerts/dark-web-data-leak-monitoring",
+    "permanent": true
+  },
+  {
+    "source": "/services/employer-workplace-risk-tracking",
+    "destination": "/monitoring-alerts/employer-workplace-risk-tracking",
+    "permanent": true
+  },
+  {
+    "source": "/services/monthly-snapshot-reports-reputation-logs",
+    "destination": "/monitoring-alerts/monthly-snapshot-reports-reputation-logs",
+    "permanent": true
+  },
+  {
+    "source": "/services/professionals",
+    "destination": "/reputation-management/professionals",
+    "permanent": true
+  },
+  {
+    "source": "/services/public-figures",
+    "destination": "/reputation-management/public-figures",
+    "permanent": true
+  },
+  {
+    "source": "/services/business-owners",
+    "destination": "/reputation-management/business-owners",
+    "permanent": true
+  },
+  {
+    "source": "/services/reputation-management-packages",
+    "destination": "/reputation-management/reputation-management-packages",
+    "permanent": true
+  },
+  {
+    "source": "/services/search-cleanup",
+    "destination": "/reputation-management/search-cleanup",
+    "permanent": true
+  },
+  {
+    "source": "/services/website-creation",
+    "destination": "/reputation-management/website-creation",
+    "permanent": true
+  },
+  {
+    "source": "/services/website-creation-for-business-owners",
+    "destination": "/reputation-management/website-creation-for-business-owners",
+    "permanent": true
+  },
+  {
+    "source": "/services/website-creation-for-professionals",
+    "destination": "/reputation-management/website-creation-for-professionals",
+    "permanent": true
+  },
+  {
+    "source": "/services/google-suppression-de-indexing",
+    "destination": "/search-result-cleanup/google-suppression-de-indexing",
+    "permanent": true
+  },
+  {
+    "source": "/services/wikipedia-page-creation",
+    "destination": "/search-result-cleanup/wikipedia-page-creation",
+    "permanent": true
+  },
+  {
+    "source": "/services/autocomplete-fix",
+    "destination": "/search-result-cleanup/autocomplete-fix",
+    "permanent": true
+  },
+  {
+    "source": "/services/news-article-removal",
+    "destination": "/search-result-cleanup/news-article-removal",
+    "permanent": true
+  },
+  {
+    "source": "/services/reddit-forum-result-cleanup",
+    "destination": "/search-result-cleanup/reddit-forum-result-cleanup",
+    "permanent": true
+  },
+  {
+    "source": "/services/youtube-video-result-suppression",
+    "destination": "/search-result-cleanup/youtube-video-result-suppression",
+    "permanent": true
+  },
+  {
+    "source": "/services/google-business-profile-audit",
+    "destination": "/reputation-audit/google-business-profile-audit",
+    "permanent": true
+  },
+  {
+    "source": "/services/personal-reputation-audit",
+    "destination": "/reputation-audit/personal-reputation-audit",
+    "permanent": true
+  },
+  {
+    "source": "/services/lawyers",
+    "destination": "/industries/lawyers",
+    "permanent": true
+  },
+  {
+    "source": "/services/doctors-medical-practices",
+    "destination": "/industries/doctors-medical-practices",
+    "permanent": true
+  },
+  {
+    "source": "/services/dentists",
+    "destination": "/industries/dentists",
+    "permanent": true
+  },
+  {
+    "source": "/services/real-estate-agents",
+    "destination": "/industries/real-estate-agents",
+    "permanent": true
+  },
+  {
+    "source": "/services/restaurants-hospitality",
+    "destination": "/industries/restaurants-hospitality",
+    "permanent": true
+  },
+  {
+    "source": "/services/car-dealerships",
+    "destination": "/industries/car-dealerships",
+    "permanent": true
+  },
+  {
+    "source": "/services/executives-hnw-individuals",
+    "destination": "/industries/executives-hnw-individuals",
+    "permanent": true
+  },
+  {
+    "source": "/services/contractors-home-services",
+    "destination": "/industries/contractors-home-services",
+    "permanent": true
+  },
+  {
+    "source": "/services/financial-advisors-wealth-managers",
+    "destination": "/industries/financial-advisors-wealth-managers",
+    "permanent": true
+  },
+  {
+    "source": "/services/plastic-surgeons-aesthetic-medicine",
+    "destination": "/industries/plastic-surgeons-aesthetic-medicine",
+    "permanent": true
+  }
+]

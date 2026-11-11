@@ -1,0 +1,237 @@
+.experience-section {
+  position: relative;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-8) 0;
+}
+
+/* Center vertical line */
+.timeline-track-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    rgba(124, 58, 237, 0.8) 0%,
+    rgba(34, 211, 238, 0.8) 50%,
+    rgba(52, 211, 153, 0.8) 100%
+  );
+  box-shadow: 0 0 14px rgba(124, 58, 237, 0.4);
+}
+
+@media (max-width: 860px) {
+  .timeline-track-line {
+    left: 20px;
+  }
+}
+
+.timeline-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.timeline-entry {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.entry-left {
+  align-self: flex-start;
+  padding-right: var(--space-10);
+}
+
+.entry-right {
+  align-self: flex-end;
+  padding-left: var(--space-10);
+}
+
+@media (max-width: 860px) {
+  .timeline-entry {
+    width: 100%;
+    align-self: flex-start !important;
+    padding-left: var(--space-12) !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Node */
+.timeline-node {
+  position: absolute;
+  top: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--accent-violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 16px rgba(124, 58, 237, 0.5);
+}
+
+.entry-left .timeline-node {
+  right: -20px;
+}
+.entry-right .timeline-node {
+  left: -20px;
+}
+
+@media (max-width: 860px) {
+  .timeline-node {
+    left: 0 !important;
+    right: auto !important;
+  }
+}
+
+.timeline-node.node-education {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.5);
+}
+
+.timeline-node-icon {
+  font-size: 14px;
+  color: var(--accent-violet);
+}
+.timeline-node-icon.edu {
+  color: var(--accent-cyan);
+}
+
+/* Card */
+.timeline-card {
+  width: 100%;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.entry-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--accent-violet);
+  background: rgba(124, 58, 237, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+.entry-badge.cyan {
+  color: var(--accent-cyan);
+  background: rgba(34, 211, 238, 0.12);
+  border-color: rgba(34, 211, 238, 0.25);
+}
+
+.entry-role {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+
+.entry-company {
+  font-size: var(--text-sm);
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.entry-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+@media (max-width: 640px) {
+  .entry-meta {
+    align-items: flex-start;
+  }
+}
+
+.meta-pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.entry-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.entry-responsibilities {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.entry-responsibilities li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.resp-check-icon {
+  font-size: 11px;
+  color: var(--accent-mint);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.entry-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--space-2);
+}
+
+.entry-skill-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background: var(--bg-glass-hover);
+  border: 1px solid var(--border-glass);
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: var(--text-primary);
+}
+.entry-skill-tag.edu {
+  color: var(--accent-cyan);
+}
+
+.coursework-title {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+}
+

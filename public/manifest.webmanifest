@@ -1,0 +1,28 @@
+{
+  "name": "Muhammad Hammad — Full Stack Developer & Creative Engineer",
+  "short_name": "MHammad",
+  "description": "Portfolio of Muhammad Hammad — Full Stack Developer & UI/UX Engineer specializing in React, Next.js, and high-performance web experiences.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05060A",
+  "theme_color": "#05060A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+

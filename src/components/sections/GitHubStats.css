@@ -1,0 +1,108 @@
+.github-section {
+  position: relative;
+}
+
+.github-overview-card {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-8);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  border: 1px solid var(--border-glow);
+}
+
+.github-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.gh-profile-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.gh-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-glass-hover);
+  border: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  color: var(--text-primary);
+}
+
+.gh-username {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.gh-status-text {
+  font-size: var(--text-xs);
+  color: var(--accent-cyan);
+}
+
+.gh-btn {
+  padding: 0.5rem 1.25rem;
+  font-size: var(--text-xs);
+}
+
+.github-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-4);
+}
+
+.gh-metric-tile {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.tile-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tile-icon { font-size: 14px; }
+.tile-icon.cyan { color: var(--accent-cyan); }
+.tile-icon.amber { color: var(--accent-amber); }
+.tile-icon.violet { color: var(--accent-violet); }
+.tile-icon.mint { color: var(--accent-mint); }
+
+.tile-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+.tile-number {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.tile-sub {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+

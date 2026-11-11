@@ -1,0 +1,32 @@
+Anchor Text,Href,Target H1,Target Title,Match,Notes
+Intellectual Property Protection,/reputation-management/professionals,Reputation Management for Professionals,Professionals | RepuKeel,No,Mismatch: Target is professional career reputation
+AI Brand Monitoring,/monitoring-alerts/social-media-reputation-monitoring,Social Media Reputation Monitoring,Social Media Reputation Monitoring | RepuKeel,No,Duplicate target with Trademark Monitoring
+Trademark Monitoring,/monitoring-alerts/social-media-reputation-monitoring,Social Media Reputation Monitoring,Social Media Reputation Monitoring | RepuKeel,No,Duplicate target with AI Brand Monitoring
+Impersonation Protection,/dating-reputation/social-media-takedowns,Social Media Takedowns,Social Media Takedowns | RepuKeel,No,Mismatch: Target is dating social media takedowns
+Anti-Counterfeiting Solutions,/content-removal/fake-review-removal,Fake Review Removal,Fake Review Removal | RepuKeel,No,Mismatch & Duplicate: Target is fake review removal
+Online Reputation Management (ORM),/services,Remove Harmful Content. Restore Your Reputation.,Online Reputation Management Services | RepuKeel,Yes,General services hub
+Application Protection,/dating-reputation/tea-app-checker-removal,Tea App Checker & Removal,Tea App Checker & Removal | RepuKeel,No,Mismatch: Target is Tea App removal
+Anti-Piracy Protection,/search-result-cleanup/youtube-video-result-suppression,YouTube & Video Result Suppression,YouTube & Video Result Suppression | RepuKeel,No,Duplicate 1/3 pointing to YouTube video suppression
+Copyright Protection,/search-result-cleanup/youtube-video-result-suppression,YouTube & Video Result Suppression,YouTube & Video Result Suppression | RepuKeel,No,Duplicate 2/3 pointing to YouTube video suppression
+DMCA Takedown Service,/content-removal/tiktok-content-removal,TikTok Content Removal,TikTok Content Removal | RepuKeel,No,Mismatch: Target is specific to TikTok
+Leaked Content Removal,/dating-reputation/awdtsg-removal,AWDTSG Removal,AWDTSG Removal | RepuKeel,No,Mismatch & Duplicate: Target is AWDTSG Facebook groups
+Adult Content Protection,/dating-reputation/image-protection,Image Protection,Image Protection | RepuKeel,No,Mismatch & Duplicate: Target is general Image Protection
+Article & Blog Removal,/search-result-cleanup/news-article-removal,News Article Removal,News Article Removal | RepuKeel,Yes,Acceptable match for news article removal
+Search Engine De-Indexing,/search-result-cleanup/google-suppression-de-indexing,Google Suppression & De-Indexing,Google Suppression & De-Indexing | RepuKeel,Yes,Exact match
+Social Media Content Removal,/content-removal/instagram-content-removal,Instagram Content Removal,Instagram Content Removal | RepuKeel,No,Mismatch & Duplicate: Target is specific to Instagram
+Remove Leaked OnlyFans Content,/dating-reputation/image-protection,Image Protection,Image Protection | RepuKeel,No,Duplicate: Targets general image protection
+Remove Leaked Private Content,/dating-reputation/awdtsg-removal,AWDTSG Removal,AWDTSG Removal | RepuKeel,No,Duplicate: Targets AWDTSG removal
+Brand Defamation Removal,/content-removal/fake-review-removal,Fake Review Removal,Fake Review Removal | RepuKeel,No,Duplicate: Targets fake review removal
+Fake Profile & Impersonation Removal,/content-removal/twitter-x-content-removal,Twitter / X Content Removal,Twitter / X Content Removal | RepuKeel,No,Mismatch: Target is specific to Twitter/X
+e-Learning Content Protection,/search-result-cleanup/youtube-video-result-suppression,YouTube & Video Result Suppression,YouTube & Video Result Suppression | RepuKeel,No,Duplicate 3/3 pointing to YouTube video suppression
+Copyright Image & Video Removal,/content-removal/instagram-content-removal,Instagram Content Removal,Instagram Content Removal | RepuKeel,No,Duplicate: Targets Instagram content removal
+Negative Article Removal,/search-result-cleanup/news-article-removal,News Article Removal,News Article Removal | RepuKeel,No,Duplicate with Article & Blog Removal
+About Us,/about,About RepuKeel,About Us | RepuKeel,Yes,Exact match
+Contact Us,/contact,Contact Us,Contact Us | RepuKeel,Yes,Exact match
+Our Clients,/clients,Trusted by Leading Creators & Brands Worldwide,Our Clients | RepuKeel,Yes,Exact match
+Request Free Analysis,/request-free-analysis,Request Free Reputation Analysis,Request Free Analysis | RepuKeel,Yes,Exact match
+Case Studies,/case-studies,Proven Results. Real Client Outcomes.,Case Studies | RepuKeel,Yes,Exact match
+Privacy Policy,/privacy-policy,Privacy Policy,Privacy Policy | RepuKeel,Yes,Exact match
+Blog,/blogs,Latest Insights & Reputation Guides,Blog | RepuKeel,Yes,Exact match
+Terms & Conditions,/terms-conditions,Terms & Conditions,Terms & Conditions | RepuKeel,Yes,Exact match
+FAQ,/faq,Frequently Asked Questions,FAQ | RepuKeel,Yes,Exact match

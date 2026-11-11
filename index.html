@@ -1,21 +1,114 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="crimson">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image" href="/Portfolio.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Muhammad Hammad — Full Stack Developer & Creative Engineer</title>
+  <meta name="title" content="Muhammad Hammad — Full Stack Developer & Creative Engineer" />
   <meta name="description"
-    content="Portfolio of Muhammad Hammad, a Full Stack Developer specializing in React.js, building modern and scalable web applications." />
-  <title>Muhammad Hammad | Full Stack Developer Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    content="Award-winning portfolio of Muhammad Hammad — Full Stack Developer & UI/UX Engineer specializing in React, Next.js, TypeScript, and high-performance immersive web applications." />
+  <meta name="keywords" content="Muhammad Hammad, Full Stack Developer, React Developer, Next.js, Frontend Engineer, UI/UX Designer, Portfolio, Web Developer Pakistan, Creative Developer" />
+  <meta name="author" content="Muhammad Hammad" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://muhammad-hammad-portfolio.vercel.app/" />
+
+  <!-- Theme Colors -->
+  <meta name="theme-color" content="#0B090B" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)" />
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- Favicon & PWA Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <!-- DNS prefetch for external APIs used at runtime -->
+  <link rel="dns-prefetch" href="https://api.github.com" />
+  <link rel="dns-prefetch" href="https://emailjs.com" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://muhammad-hammad-portfolio.vercel.app/" />
+  <meta property="og:title" content="Muhammad Hammad — Full Stack Developer & Creative Engineer" />
+  <meta property="og:description"
+    content="Crafting award-winning web applications with React, Next.js, TypeScript, bespoke glassmorphism, and sub-second performance." />
+  <meta property="og:image" content="https://muhammad-hammad-portfolio.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Muhammad Hammad Portfolio" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://muhammad-hammad-portfolio.vercel.app/" />
+  <meta property="twitter:title" content="Muhammad Hammad — Full Stack Developer & Creative Engineer" />
+  <meta property="twitter:description"
+    content="Crafting award-winning web applications with React, Next.js, TypeScript, bespoke glassmorphism, and sub-second performance." />
+  <meta property="twitter:image" content="https://muhammad-hammad-portfolio.vercel.app/og-image.png" />
+
+  <!-- Preconnect and Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <!-- Non-blocking font load: preload then swap in via onload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    />
+  </noscript>
+
+  <!-- JSON-LD Structured Data: Person & WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://muhammad-hammad-portfolio.vercel.app/#person",
+        "name": "Muhammad Hammad",
+        "alternateName": "Hammad",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://muhammad-hammad-portfolio.vercel.app/",
+        "sameAs": [
+          "https://github.com/muhammadhammad249",
+          "https://www.linkedin.com/in/muhammad-hammad-40a156290/"
+        ],
+        "email": "mailto:muhammadhammadjato65@gmail.com",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Superior University"
+        },
+        "description": "Full Stack Developer & Creative Engineer specializing in React.js, Next.js, TypeScript, and modern web applications."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://muhammad-hammad-portfolio.vercel.app/#website",
+        "url": "https://muhammad-hammad-portfolio.vercel.app/",
+        "name": "Muhammad Hammad Portfolio",
+        "description": "Personal Portfolio of Muhammad Hammad — Full Stack Developer & Creative UI/UX Engineer",
+        "publisher": {
+          "@id": "https://muhammad-hammad-portfolio.vercel.app/#person"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

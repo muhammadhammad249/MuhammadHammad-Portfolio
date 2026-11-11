@@ -1,0 +1,64 @@
+.certificates-section {
+  position: relative;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-6);
+}
+
+.achievement-card {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+  border: 1px solid var(--border-glass);
+}
+
+.achievement-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  background: rgba(124, 58, 237, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--accent-violet);
+  flex-shrink: 0;
+}
+
+.achievement-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.achievement-year {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-cyan);
+}
+
+.achievement-title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.achievement-issuer {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.achievement-desc {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+

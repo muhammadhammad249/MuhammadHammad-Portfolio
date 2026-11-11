@@ -1,0 +1,14 @@
+node_modules/
+.next/
+build/
+dist/
+.env*
+.vercel/
+coverage/
+*.log
+*.mp4
+*.zip
+.DS_Store
+.vscode/
+**/.vscode/
+test-smtp.js

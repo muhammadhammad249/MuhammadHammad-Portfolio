@@ -1,0 +1,240 @@
+/* ══════════════════════════════════════════════════════════
+   DESIGN TOKENS & SYSTEM VARIABLES
+   Muhammad Hammad Portfolio • Awwwards-grade Design Architecture
+   ══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Spacing Scale (4/8 Grid) ── */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* ── Radii ── */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
+  --radius-full: 9999px;
+
+  /* ── Typography Scale (Fluid clamp) ── */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, Consolas, monospace;
+
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+  --text-sm: clamp(0.8125rem, 0.76rem + 0.28vw, 0.875rem);
+  --text-base: clamp(0.9375rem, 0.88rem + 0.3vw, 1rem);
+  --text-lg: clamp(1.0625rem, 0.98rem + 0.4vw, 1.1875rem);
+  --text-xl: clamp(1.25rem, 1.12rem + 0.65vw, 1.4375rem);
+  --text-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);
+  --text-3xl: clamp(1.875rem, 1.55rem + 1.6vw, 2.375rem);
+  --text-4xl: clamp(2.25rem, 1.8rem + 2.25vw, 3.125rem);
+  --text-5xl: clamp(2.75rem, 2.1rem + 3.25vw, 4.25rem);
+  --text-6xl: clamp(3.25rem, 2.3rem + 4.75vw, 5.75rem);
+
+  /* ── Elevation & Glows ── */
+  --blur-xs: blur(8px);
+  --blur-sm: blur(14px);
+  --blur-md: blur(20px);
+  --blur-lg: blur(32px);
+  --blur-xl: blur(48px);
+
+  /* ── Z-Index Scale ── */
+  --z-negative: -1;
+  --z-base: 1;
+  --z-card: 10;
+  --z-dropdown: 50;
+  --z-sticky: 100;
+  --z-navbar: 1000;
+  --z-modal: 2000;
+  --z-toast: 3000;
+  --z-cursor: 9999;
+
+  /* ── Motion & Springs ── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 180ms;
+  --duration-normal: 320ms;
+  --duration-slow: 600ms;
+  --duration-cinematic: 1000ms;
+
+  /* ── Accent Constants ── */
+  --accent-violet: #7C3AED;
+  --accent-indigo: #6366F1;
+  --accent-cyan: #22D3EE;
+  --accent-mint: #34D399;
+  --accent-rose: #F472B6;
+  --accent-amber: #FBBF24;
+
+  /* Multi-stop Brand Gradients */
+  --gradient-brand: linear-gradient(135deg, #7C3AED 0%, #6366F1 35%, #22D3EE 80%, #34D399 100%);
+  --gradient-brand-subtle: linear-gradient(135deg, rgba(124, 58, 237, 0.15) 0%, rgba(99, 102, 241, 0.12) 35%, rgba(34, 211, 238, 0.1) 80%, rgba(52, 211, 153, 0.1) 100%);
+  --gradient-text: linear-gradient(135deg, #FFFFFF 20%, #E2E8F0 50%, #94A3B8 100%);
+  --gradient-aurora: radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.22) 0%, rgba(99, 102, 241, 0.12) 35%, rgba(34, 211, 238, 0.05) 70%, transparent 100%);
+}
+
+/* ══════════════════════════════════════════════════════════
+   DARK THEME (Cyber Dark)
+   ══════════════════════════════════════════════════════════ */
+html[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg-base: #05060A;
+  --bg-deep: #030408;
+  --bg-elevated: #0A0B14;
+  --bg-card: rgba(14, 16, 28, 0.75);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --bg-glass-hover: rgba(255, 255, 255, 0.08);
+  --bg-glass-active: rgba(255, 255, 255, 0.12);
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-glass: rgba(255, 255, 255, 0.09);
+  --border-glow: rgba(124, 58, 237, 0.4);
+  --border-active: rgba(34, 211, 238, 0.6);
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-tertiary: #64748B;
+  --text-inverse: #05060A;
+
+  --surface-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(124, 58, 237, 0.14), transparent 40%);
+  --card-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.06);
+  --card-shadow-hover: 0 24px 48px -12px rgba(124, 58, 237, 0.25), 0 0 1px 1px rgba(34, 211, 238, 0.25);
+
+  --selection-bg: #7C3AED;
+  --selection-color: #FFFFFF;
+  --scrollbar-track: #05060A;
+  --scrollbar-thumb: rgba(255, 255, 255, 0.15);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.3);
+}
+
+/* ══════════════════════════════════════════════════════════
+   LIGHT THEME (Crafted, High-Contrast)
+   ══════════════════════════════════════════════════════════ */
+html[data-theme='light'] {
+  color-scheme: light;
+
+  --bg-base: #F8FAFC;
+  --bg-deep: #EEF2F6;
+  --bg-elevated: #FFFFFF;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-glass: rgba(255, 255, 255, 0.7);
+  --bg-glass-hover: rgba(255, 255, 255, 0.95);
+  --bg-glass-active: #FFFFFF;
+
+  --border-subtle: rgba(15, 23, 42, 0.06);
+  --border-glass: rgba(15, 23, 42, 0.08);
+  --border-glow: rgba(124, 58, 237, 0.35);
+  --border-active: rgba(99, 102, 241, 0.5);
+
+  --text-primary: #0A0D14;
+  --text-secondary: #475569;
+  --text-tertiary: #64748B;
+  --text-inverse: #FFFFFF;
+
+  --surface-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(124, 58, 237, 0.08), transparent 40%);
+  --card-shadow: 0 12px 30px -10px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(15, 23, 42, 0.06);
+  --card-shadow-hover: 0 20px 40px -10px rgba(99, 102, 241, 0.16), 0 0 0 1px rgba(124, 58, 237, 0.25);
+
+  --selection-bg: #6366F1;
+  --selection-color: #FFFFFF;
+  --scrollbar-track: #F8FAFC;
+  --scrollbar-thumb: rgba(15, 23, 42, 0.2);
+  --scrollbar-thumb-hover: rgba(15, 23, 42, 0.4);
+}
+
+/* ══════════════════════════════════════════════════════════
+   CRIMSON VELVET THEME (Red + Charcoal Luxury — Default)
+   ══════════════════════════════════════════════════════════ */
+html[data-theme='crimson'],
+:root:not([data-theme='dark']):not([data-theme='light']) {
+  color-scheme: dark;
+
+  /* Charcoal Foundation */
+  --bg-base: #0B090B;
+  --bg-deep: #060506;
+  --bg-elevated: #140F13;
+  --bg-card: rgba(20, 14, 18, 0.82);
+  --bg-glass: rgba(225, 29, 72, 0.05);
+  --bg-glass-hover: rgba(225, 29, 72, 0.1);
+  --bg-glass-active: rgba(225, 29, 72, 0.16);
+
+  /* Crimson & Rose Borders */
+  --border-subtle: rgba(244, 63, 94, 0.12);
+  --border-glass: rgba(255, 255, 255, 0.07);
+  --border-glow: rgba(225, 29, 72, 0.5);
+  --border-active: rgba(244, 63, 94, 0.7);
+
+  /* High-Legibility Velvet Typography */
+  --text-primary: #FFF1F2;
+  --text-secondary: #FDA4AF;
+  --text-tertiary: #A78B97;
+  --text-inverse: #0B090B;
+
+  /* Atmospheric Velvet Lighting */
+  --surface-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(225, 29, 72, 0.16), transparent 40%);
+  --card-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.75), 0 0 1px 1px rgba(225, 29, 72, 0.15);
+  --card-shadow-hover: 0 24px 48px -12px rgba(225, 29, 72, 0.35), 0 0 1px 1px rgba(244, 63, 94, 0.4);
+
+  /* Crimson Accents & Gradients */
+  --accent-violet: #E11D48;
+  --accent-indigo: #BE123C;
+  --accent-cyan: #FB7185;
+  --accent-mint: #FDA4AF;
+  --accent-rose: #F43F5E;
+  --accent-amber: #FECDD3;
+
+  --gradient-brand: linear-gradient(135deg, #BE123C 0%, #E11D48 40%, #FB7185 85%, #FDA4AF 100%);
+  --gradient-brand-subtle: linear-gradient(135deg, rgba(190, 18, 60, 0.22) 0%, rgba(225, 29, 72, 0.16) 40%, rgba(251, 113, 133, 0.1) 85%, rgba(253, 164, 175, 0.08) 100%);
+  --gradient-text: linear-gradient(135deg, #FFF1F2 20%, #FDA4AF 60%, #F43F5E 100%);
+  --gradient-aurora: radial-gradient(circle at 50% 0%, rgba(225, 29, 72, 0.28) 0%, rgba(190, 18, 60, 0.16) 35%, rgba(136, 19, 55, 0.08) 70%, transparent 100%);
+
+  /* Interactions */
+  --selection-bg: #E11D48;
+  --selection-color: #FFFFFF;
+  --scrollbar-track: #0B090B;
+  --scrollbar-thumb: rgba(225, 29, 72, 0.32);
+  --scrollbar-thumb-hover: rgba(244, 63, 94, 0.55);
+}
+
+/* ══════════════════════════════════════════════════════════
+   VIEW TRANSITIONS API (Circular Reveal Animation)
+   ══════════════════════════════════════════════════════════ */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
+/* Reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
